@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setShowMams(true)
-    }, 2000)
+    }, 3000)
   }, [])
 
   return (
