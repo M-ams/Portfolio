@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fade-out1 {
+  animation: fadeOut 0.75s ease-out forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.fade-out2 {
+  animation: fadeOut 1.2s ease-out forwards;
+  animation-delay: 2s;
+
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+ @keyframes fadeIn {
+   from {
+     opacity: 0;
+   }
+   to {
+     opacity: 1;
+   }
+  
+ }
+
+ .change-text {
+  animation-name: fontChange;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fontChange {
+  0% {
+    font-family: 'Major Mono Display', monospace;
+  }
+  20% {
+    font-family: 'Kaushan Script', cursive;
+  }
+  40% {
+    font-family: 'Lobster', cursive;
+  }
+  60% {
+    font-family: 'Ranchers', cursive;
+  }
+  80% {
+    font-family: 'Bitter', serif;
+  }
+  100% {
+    font-family: 'Major Mono Display', monospace;
+  }
+}
+
+
+
+.cssanimation, .cssanimation span {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.cssanimation span { display: inline-block }
+
+.fadeInBottom { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+  from {
+      opacity: 0;
+      transform: translateY(10%);
+  }
+  to { opacity: 1 }
+}
+.font {
+  font-family: 'garamond', sans-serif;
+}
+
+
+.gg {
+  animation: fadeInRight 1s ease-in-out;
+
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+a {
+  box-shadow: inset 0 0 0 0 white;
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
+  transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
+}
+a:hover {
+  color: black;
+  box-shadow: inset 100vw 0 0 0 white;;
+}
+
+/* Presentational styles */
