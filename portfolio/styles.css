@@ -117,5 +117,7 @@ a:hover {
   color: black;
   box-shadow: inset 100vw 0 0 0 white;;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* Presentational styles */
