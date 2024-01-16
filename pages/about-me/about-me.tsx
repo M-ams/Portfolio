@@ -8,7 +8,7 @@ function AboutMe() {
         <div className="flex ml-40">
           <div className="flex flex-col text-gray-500 h-auto w-[40vw] text-left">
             <div className="text-2xl mt-4">
-              Well now you know my nickname but for me it&aposs not enough, so let&aposs
+              Well now you know my nickname but for me it&apos;s not enough, so let&apos;s
               go.
             </div>
             <div className="text-2xl mt-8">
