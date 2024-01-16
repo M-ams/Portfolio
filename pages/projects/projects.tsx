@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 function Projects() {
   return (
     <div className="bg-[#121111] h-screen flex flex-col">
@@ -34,7 +34,8 @@ function Projects() {
               TypeScript, NextJs, Prisma, ExpressJs
             </span>
           </div>
-          <img
+          <Image
+          alt="dcgg"
             src="/assets/images/dcgg.png"
             className=" h-[38vh] ml-5 m-auto"
           />
