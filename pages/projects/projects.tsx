@@ -35,6 +35,8 @@ function Projects() {
             </span>
           </div>
           <Image
+          height={400}
+          width={400}
           alt="dcgg"
             src="/assets/images/dcgg.png"
             className=" h-[38vh] ml-5 m-auto"

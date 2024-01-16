@@ -24,7 +24,7 @@ function AboutMe() {
               developer
             </div>
           </div>
-          <Image src="" alt="test" className="border m-auto h-[35vh] w-[30vw]" />
+          <Image src="" alt="test" width={400} height={400} className="border m-auto" />
         </div>
       </div>
     </div>
