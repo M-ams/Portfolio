@@ -1,3 +1,4 @@
+import Image from "next/image";
 function AboutMe() {
   return (
     <div className="bg-[#121111] h-screen flex flex-col">
@@ -23,7 +24,7 @@ function AboutMe() {
               developer
             </div>
           </div>
-          <image className="border m-auto h-[35vh] w-[30vw]" />
+          <Image src="" alt="test" className="border m-auto h-[35vh] w-[30vw]" />
         </div>
       </div>
     </div>
