@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Projects() {
   return (
-    <div className="bg-[#121111] h-auto flex flex-col">
+    <div className="bg-[#121111] h-screen flex flex-col">
       <div className="">
         <p className="text-white text-6xl m-20 font-extralight cssanimation sequence fadeInBottom">
           Some of my Works

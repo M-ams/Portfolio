@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Kaushan+Script&family=Lobster&family=Major+Mono+Display&family=Ranchers&display=swap');
+
 /* Fonts */
 .courier
 {
@@ -10,7 +12,7 @@
 
 .fade-out1 {
   animation: fadeOut 0.75s ease-out forwards;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 @keyframes fadeOut {
@@ -23,8 +25,8 @@
   }
 }
 .fade-out2 {
-  animation: fadeOut 1.2s ease-out forwards;
-  animation-delay: 2s;
+  animation: fadeOut 1s ease-out forwards;
+  animation-delay: 1.25s;
 }
 
 @keyframes fadeOut {
@@ -54,6 +56,7 @@
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
+
 
 @keyframes fontChange {
   0% {

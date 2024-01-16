@@ -17,10 +17,10 @@ function Homepage() {
           <Link href="/projects/projects" className="ff">
             PROJECTS
           </Link>
-          <Link href="#" className="pt-10 ff">
+          <Link href="/about-me/about-me" className="pt-10 ff">
             ABOUT ME
           </Link>
-          <Link href="#" className="pt-10 ff">
+          <Link href="/contact/contact" className="pt-10 ff">
             CONTACT
           </Link>
         </div>

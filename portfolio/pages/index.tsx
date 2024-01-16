@@ -11,7 +11,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setShowMams(true);
-    }, 4000);
+    }, 3000);
   }, []);
 
   return <>{showMams ? <Homepage /> : <Mams />}</>;
