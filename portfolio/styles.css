@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+.courier
+{
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
 .fade-out1 {
   animation: fadeOut 0.75s ease-out forwards;
   animation-delay: 2s;
@@ -19,7 +25,6 @@
 .fade-out2 {
   animation: fadeOut 1.2s ease-out forwards;
   animation-delay: 2s;
-
 }
 
 @keyframes fadeOut {
@@ -76,6 +81,7 @@
 .cssanimation, .cssanimation span {
   animation-duration: 1s;
   animation-fill-mode: both;
+  animation-delay: 0.2s;
 }
 
 .cssanimation span { display: inline-block }
@@ -95,7 +101,6 @@
 
 .gg {
   animation: fadeInRight 1s ease-in-out;
-
 }
 
 @keyframes fadeInRight {
@@ -107,17 +112,65 @@
     opacity: 1;
   }
 }
-a {
+.ff {
   box-shadow: inset 0 0 0 0 white;
   padding: 0 .25rem;
   margin: 0 -.25rem;
   transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
 }
-a:hover {
+.ff:hover {
   color: black;
   box-shadow: inset 100vw 0 0 0 white;;
 }
 html {
   scroll-behavior: smooth;
 }
-/* Presentational styles */
+/* Projects */
+.dcgg {
+  cursor: pointer;
+  position: relative;
+  background: #121111;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 1s;
+}
+
+.dcgg:after,
+.dcgg:before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 0px solid violet;
+  transition: all 1s;
+}
+
+.dcgg:after {
+  top: -1px;
+  left: -1px;
+  border-top: 5px solid #6f4cf9;
+  border-left: 5px solid #6f4cf9;
+}
+
+.dcgg:before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 5px solid #6f4cf9;
+  border-right: 5px solid #6f4cf9;
+}
+
+.dcgg:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  color: #6f4cf9;
+}
+
+.dcgg:hover:before,
+.dcgg:hover:after {
+  width: 100%;
+  height: 100%;
+}
+
+.dark-purple {
+  color: #6f4cf9;
+}
