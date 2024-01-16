@@ -39,7 +39,7 @@ function Projects() {
           width={400}
           alt="dcgg"
             src="/assets/images/dcgg.png"
-            className=" h-[38vh] ml-5 m-auto"
+            className="ml-5 m-auto"
           />
         </div>
       </div>
