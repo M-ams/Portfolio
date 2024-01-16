@@ -5,7 +5,7 @@ function Homepage() {
       <div className="bg-[#121111] h-screen flex">
         <div className=" text-white pl-40 pt-20 cssanimation sequence fadeInBottom dd">
           <div className="flex text-2xl font-extralight">
-            <p className="mams">Hello, I am SY Mamadou,</p>
+            <p className="mams">Hello, I am SY Mamadou,,</p>
             <p className="dev ml-1">Full Stack Web Developer</p>
           </div>
           <div className="flex text-2xl font-extralight">
