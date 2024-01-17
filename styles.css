@@ -177,3 +177,32 @@ html {
 .dark-purple {
   color: #6f4cf9;
 }
+
+/* About Me */
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.float1 {
+  animation: float 6s ease-in-out infinite;
+}
+.float2 {
+  animation: float 5s ease-in-out infinite;
+}
+.float3 {
+  animation: float 4s ease-in-out infinite;
+}
+.float4 {
+  animation: float 3s ease-in-out infinite;
+}
+.float5 {
+  animation: float 2s ease-in-out infinite;
+}
