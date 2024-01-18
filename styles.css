@@ -89,6 +89,7 @@
   animation-delay: 0.2s;
 }
 
+
 .cssanimation span { display: inline-block }
 
 .fadeInBottom { animation-name: fadeInBottom }
@@ -151,15 +152,15 @@ html {
 
 
 .social {
-  color: rgba(167, 146, 129, 0.6);
-  border: 1px solid rgba(167, 146, 129, 0.4);
+  color: gray;
+  border: 1px solid gray;
   cursor: pointer;
   transition: ease 0.3s;
 }
 
 .social:hover {
-  color: rgba(167, 146, 129, 1);
-  border: 1px solid rgba(167, 146, 129, 1);
+  color: white;
+  border: 1px solid white;
 }
 
 .social:hover > .social {
@@ -169,6 +170,7 @@ opacity: 0.5;
 .social:hover > .social:hover {
 opacity: 1;
 }
+
 /* Projects */
 .dcgg {
   cursor: pointer;
