@@ -12,7 +12,7 @@ function Projects() {
   return (
     <div className="bg-[#121111] min-h-screen flex flex-col">
       <div className="">
-        <p className="text-white text-[3vw] xs:text-[5vw] md:text-center m-20 font-bold cssanimation sequence fadeInBottom">
+        <p className="text-white text-[3vw] xs:text-[5vw] xs:text-center md:text-center m-20 font-bold cssanimation sequence fadeInBottom">
           Some of my Works
         </p>
       </div>
