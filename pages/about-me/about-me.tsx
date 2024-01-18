@@ -91,11 +91,11 @@ function AboutMe() {
           </div>
         </div>
         <Image
-          src=""
+          src="/assets/images/mamsimg.jpg"
           alt="test"
           width={400}
-          height={400}
-          className="border rounded-3xl m-auto"
+          height={200}
+          className="rounded-3xl m-auto"
         />
       </div>
 
@@ -138,13 +138,6 @@ function AboutMe() {
             world.
           </div>
         </div>
-        <Image
-          src=""
-          alt="test"
-          width={400}
-          height={400}
-          className="border rounded-3xl m-auto"
-        />
       </div>
       <div className="flex m-auto mt-10 space-x-6 cssanimation sequence fadeInBottom">
         <Link href="/" className="btn btn--stripe btn--radius">
