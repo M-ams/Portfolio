@@ -26,7 +26,7 @@ function Homepage() {
           CONTACT
         </Link>
       </div>
-      <div className=" text-white xl:ml-[6vw] xl:pt-[27vh] lg:ml-[6vw] lg:pt-[27vh] 2xl:ml-[6vw] 2xl:pt-[27vh] xs:pt-[15vh] md:pt-[15vh] cssanimation sequence fadeInBottom dd">
+      <div className=" text-white xl:ml-[6vw] xl:pt-[20vh] lg:ml-[6vw] lg:pt-[27vh] 2xl:ml-[6vw] 2xl:pt-[27vh] xs:pt-[15vh] md:pt-[15vh] cssanimation sequence fadeInBottom dd">
         <div className="xl:flex text-[3vw] xs:text-[10vw] md:text-[7vw] 2xl:text-[4vw] xs:text-center md:text-center font-normal courier tracking-wider">
           <p className="mams">Hi, I am SY Mamadou.</p>
         </div>
