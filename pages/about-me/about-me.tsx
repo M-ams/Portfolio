@@ -18,7 +18,7 @@ import Link from "next/link";
 
 function AboutMe() {
   return (
-    <div className="bg-[#121111] h-auto flex flex-col">
+    <div className="bg-[#121111] h-[100vh] flex flex-col">
       <p className="text-white text-6xl m-20 cssanimation sequence fadeInBottom font-bold">
         What about me ?
       </p>

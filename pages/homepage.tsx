@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Homepage() {
   return (
-    <div className="bg-[#121111] h-screen flex flex-col">
+    <div className="bg-[#121111] h-[100vh] flex flex-col">
       <div className="space-x-8 ml-[60vw] flex mt-8">
         <Link
           href="/about-me/about-me"

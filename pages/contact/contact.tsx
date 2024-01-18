@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Contact() {
   return (
-    <div className="bg-[#121111] h-screen flex flex-col">
+    <div className="bg-[#121111] h-[100vh] flex flex-col">
       <div className="flex flex-col mt-[25vh] ml-[17vw] optima">
         <p className="text-9xl text-white gg">Hello.</p>
         <p className="text-2xl text-white mt-10 font-thin gg2">
