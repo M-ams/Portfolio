@@ -11,7 +11,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 
 function Projects() {
   return (
-    <div className="bg-[#121111] h-auto flex flex-col">
+    <div className="bg-[#121111] min-h-screen flex flex-col">
       <div className="">
         <p className="text-white text-6xl m-20 font-bold cssanimation sequence fadeInBottom">
           Some of my Works
