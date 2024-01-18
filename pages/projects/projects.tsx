@@ -117,7 +117,7 @@ function Projects() {
         </div>
       </div>
       <div className="flex m-auto mt-10 space-x-6 cssanimation sequence fadeInBottom">
-        <Link href="/" className="btn btn--stripe btn--radius">
+        <Link href="/" className="btn btn--stripe btn--radius 2xl:text-[2vw]">
           Home
         </Link>
       </div>
