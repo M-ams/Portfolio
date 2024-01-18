@@ -95,7 +95,7 @@ function AboutMe() {
         />
       </div>
 
-      <p className="text-white text-[3vw] xs:text-[5vw] md:text-center m-20 font-bold cssanimation sequence fadeInBottom">
+      <p className="text-white text-[3vw] xs:text-[5vw] xs:text-center md:text-center m-20 font-bold cssanimation sequence fadeInBottom">
         Where I&apos;ve worked ?
       </p>
       <div className="xl:flex flex-col 2xl:flex lg:flex xl:ml-40 2xl:ml-40 lg:ml-40 xs:m-auto md:m-auto xs:text-center md:text-center  gg">
