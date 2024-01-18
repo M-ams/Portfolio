@@ -9,19 +9,19 @@ function Homepage() {
       <div className="space-x-8 ml-[60vw] flex mt-8">
         <Link
           href="/about-me/about-me"
-          className="text-white text-3xl font-bold gg stroke"
+          className="text-white text-3xl font-bold gg text-underline-center"
         >
           ABOUT ME
         </Link>
         <Link
           href="/projects/projects"
-          className="text-white text-3xl font-bold gg2 stroke"
+          className="text-white text-3xl font-bold gg2 text-underline-center"
         >
           WORKS
         </Link>
         <Link
           href="/contact/contact"
-          className="text-white text-3xl font-bold gg3 stroke"
+          className="text-white text-3xl font-bold gg3 text-underline-center"
         >
           CONTACT
         </Link>
@@ -39,7 +39,7 @@ function Homepage() {
         </div>
       </div>
       <div className="w-auto  flex justify-center items-center">
-        <div className="flex space-x-9 cssanimation sequence fadeInBottom dd border-t-2 justify-center align-middle w-[40vw] mt-[20vh]">
+        <div className="flex space-x-9 cssanimation sequence fadeInBottom dd justify-center align-middle w-[40vw] mt-[20vh]">
           <Link href="https://github.com/Mams-sy" target="_blank" className="social mt-[6vh] float2">
             <FaGithub className="text-5xl m-4" />
           </Link>
