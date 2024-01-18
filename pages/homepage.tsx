@@ -5,8 +5,8 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Homepage() {
   return (
-    <div className="bg-[#121111] h-screen">
-      <div className="space-x-8 ml-[60vw] flex border mt-8">
+    <div className="bg-[#121111] h-screen flex flex-col">
+      <div className="space-x-8 ml-[60vw] flex mt-8">
         <Link
           href="/about-me/about-me"
           className="text-white text-3xl font-bold gg stroke"
@@ -40,11 +40,11 @@ function Homepage() {
       </div>
       <div className="w-auto  flex justify-center items-center">
         <div className="flex space-x-9 cssanimation sequence fadeInBottom dd border-t-2 justify-center align-middle w-[40vw] mt-[20vh]">
-          <Link href="https://github.com/Mams-sy" target="_blank" className="social mt-[6vh]">
+          <Link href="https://github.com/Mams-sy" target="_blank" className="social mt-[6vh] float2">
             <FaGithub className="text-5xl m-4" />
           </Link>
 
-          <Link href="https://www.linkedin.com/in/mamadou-sy/" target="_blank" className="social mt-[6vh]">
+          <Link href="https://www.linkedin.com/in/mamadou-sy/" target="_blank" className="social social1 mt-[6vh] float4">
             <FaLinkedin className="text-5xl m-4" />
           </Link>
         </div>

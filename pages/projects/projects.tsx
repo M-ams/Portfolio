@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { TbBrandMysql, TbBrandNextjs } from "react-icons/tb";
-import { FaNodeJs } from "react-icons/fa";
+import { TbBrandNextjs } from "react-icons/tb";
 import { SiExpress } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
