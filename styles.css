@@ -156,14 +156,12 @@ html {
 
 .social {
   color: gray;
-  border: 1px solid gray;
   cursor: pointer;
   transition: ease 0.3s;
 }
 
 .social:hover {
   color: white;
-  border: 1px solid white;
 }
 
 .social:hover > .social {
@@ -175,13 +173,11 @@ opacity: 1;
 }
 .social1 {
   color:gray;
-  border: 1px solid gray;
   cursor: pointer;
   transition: ease 0.3s;
 }
 .social1:hover {
   color: #0e76a8;
-  border: 1px solid #0e76a8;
 }
 
 .text-underline-center {

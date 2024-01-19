@@ -21,7 +21,7 @@ function Projects() {
         <div className="divdcgg gg xs:text-center xs:w-[40vw] xs:m-auto xs:item-center md:w-[40vw] md:m-auto">
           <Link
             href="https://dc.gg"
-            className="text-white text-[3vw] xs:text-[8vw] xl:ml-[10vw] lg:ml-[10vw] 2xl:ml-[10vw] dcgg items-center justify-center flex 2xl:w-[15Vw] xl:w-[15Vw] xl:h-[10vh] 2xl:h-[10vh] lg:w-[15Vw] lg:h-[10vh]"
+            className="text-white text-[3vw] md:text-[5vw] xs:text-[8vw] xl:ml-[10vw] lg:ml-[10vw] 2xl:ml-[10vw] dcgg items-center justify-center flex 2xl:w-[15Vw] xl:w-[15Vw] xl:h-[10vh] 2xl:h-[10vh] lg:w-[15vw] lg:h-[10vh] "
             target="_blank"
           >
             DC.GG
@@ -40,22 +40,22 @@ function Projects() {
               <span className="dark-purple">personalized invitation links</span>{" "}
               with a functionnality of real-time tracking.
             </div>
-            <span className="dark-purple xl:mb-10 lg:mb-10 flex dark-purple xs:mt-10">
-              <div className=" flex flex-col m-auto  w-[6vw] float1">
-                <SiPrisma className="text-3xl m-auto 2xl:text-[4vw]" />
-                <div className="m-auto">Prisma</div>
+            <span className="dark-purple xl:mb-10 lg:mb-10 flex dark-purple mt-10 mb-10">
+              <div className=" flex flex-col m-auto xs:text-[6vw] md:text-[4vw] text-[2vw] w-full float1">
+                <SiPrisma className=" m-auto" />
+                <div className="">Prisma</div>
               </div>
-              <div className="flex flex-col m-auto  w-[6vw] float4">
-                <SiTypescript className="text-3xl m-auto 2xl:text-[4vw]" />
-                <div className="m-auto">Typescript</div>
+              <div className="flex flex-col m-auto xs:text-[6vw] md:text-[4vw]  text-[2vw] w-full float4">
+                <SiTypescript className=" m-auto " />
+                <div className="">Typescript</div>
               </div>
-              <div className="flex flex-col m-auto  w-[6vw] float2">
-                <TbBrandNextjs className="text-3xl m-auto 2xl:text-[4vw]"  />
-                <div className="m-auto">NextJs</div>
+              <div className="flex flex-col m-auto xs:text-[6vw] md:text-[4vw] text-[2vw] w-full float2">
+                <TbBrandNextjs className="m-auto"  />
+                <div className="">NextJs</div>
               </div>
-              <div className="flex flex-col m-auto  w-[6vw] float5">
-                <SiExpress className="text-3xl m-auto 2xl:text-[4vw]" />
-                <div className="m-auto">ExpressJs</div>
+              <div className="flex flex-col m-auto xs:text-[6vw] md:text-[4vw] text-[2vw] w-full float5">
+                <SiExpress className=" m-auto" />
+                <div className="">ExpressJs</div>
               </div>
             </span>
           </div>
@@ -64,16 +64,16 @@ function Projects() {
             width={400}
             alt="dcgg"
             src="/assets/images/dcgg.png"
-            className="2xl:ml-10 2xl:m-auto 2xl:w-[40vw] xl:ml-10 xl:m-auto xl:w-[40vw] lg:ml-10 lg:m-auto lg:w-[40vw] md:m-auto md:mt-10 gg3"
+            className="2xl:ml-10 2xl:w-[40vw] xl:ml-10  xl:w-[40vw] lg:ml-10  lg:w-[40vw] m-auto md:mt-10 gg3"
           />
         </div>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col xl:mt-[18vh] lg:mt-[18vh] 2xl:mt-[18vh]">
         <div className="gg xs:text-center xs:w-[40vw] xs:m-auto xs:item-center md:w-[40vw] md:m-auto">
           <Link
             href="https://www.actadat.fr"
-            className="text-white text-[3vw] xs:text-[8vw] xl:ml-[10vw] lg:ml-[10vw] 2xl:ml-[10vw] actadat items-center justify-center flex 2xl:w-[15Vw] xl:w-[15Vw] xl:h-[10vh] 2xl:h-[10vh] lg:w-[15Vw] lg:h-[10vh]"
+            className="text-white text-[3vw] xs:text-[8vw] md:text-[5vw] xl:ml-[10vw] lg:ml-[10vw] 2xl:ml-[10vw] actadat items-center justify-center flex 2xl:w-[15Vw] xl:w-[15Vw] xl:h-[10vh] 2xl:h-[10vh] lg:w-[15Vw] lg:h-[10vh]"
             target="_blank"
           >
             ACTADAT
@@ -85,25 +85,25 @@ function Projects() {
             <div className="dcggtext text-white  m-auto 2xl:text-left xl:text-left lg:text-left">
               <span className="actcolor">Actadat</span> was the software I was
               working on during my{" "}
-              <span className="actcolor">apprenticeship</span>. This software is
+              <span className="actcolor">internship</span>. This software is
               for
-              <span className="actcolor">accounting firms</span>. It allows you
+              <span className="actcolor"> accounting firms</span>. It allows you
               to manage your accounting firm and have a reliable and complete
               monitoring of accounting records. I participated in the
               development of <span className="actcolor">new features</span>.
             </div>
-            <span className="dark-purple xl:mb-10 lg:mb-10 flex actcolor xs:mt-10">
-              <div className=" flex flex-col m-auto  w-[6vw] float1 ">
-                <SiPhp className="text-3xl m-auto 2xl:text-[4vw]" />
-                <div className="m-auto">Php</div>
+            <span className="dark-purple flex actcolor mt-10">
+              <div className=" flex flex-col m-auto xs:text-[6vw] md:text-[4vw] text-[2vw] w-full float1 ">
+                <SiPhp className=" m-auto" />
+                <div className="">Php</div>
               </div>
-              <div className="flex flex-col m-auto  w-[6vw] float4">
-                <FaSymfony className="text-3xl m-auto 2xl:text-[4vw]" />
-                <div className="m-auto">Symfony</div>
+              <div className="flex flex-col m-auto xs:text-[6vw] md:text-[4vw] text-[2vw] w-full float4">
+                <FaSymfony className="m-auto" />
+                <div className="">Symfony</div>
               </div>
-              <div className="flex flex-col m-auto  w-[6vw] float2">
-                <IoLogoJavascript className="text-3xl m-auto 2xl:text-[4vw]" />
-                <div className="m-auto">Javascript</div>
+              <div className="flex flex-col m-auto xs:text-[6vw] md:text-[4vw]  text-[2vw] w-full float2">
+                <IoLogoJavascript className="m-auto" />
+                <div className="">Javascript</div>
               </div>
             </span>
           </div>
@@ -112,7 +112,7 @@ function Projects() {
             width={400}
             alt="dcgg"
             src="/assets/images/actadat.png"
-            className="2xl:ml-10 2xl:m-auto 2xl:w-[40vw] xl:ml-10 xl:m-auto xl:w-[40vw] lg:ml-10 lg:m-auto lg:w-[40vw] md:m-auto md:mt-10 gg3"
+            className=" m-auto 2xl:ml-10  2xl:w-[40vw] xl:ml-10  xl:w-[40vw] lg:ml-10  lg:w-[40vw] md:mt-10 gg3"
           />
         </div>
       </div>

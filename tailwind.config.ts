@@ -14,7 +14,7 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       screens: {
-        'xs': {'min': '300px', 'max': '639px'},  // Extra small screens
+        'xs': {'min': '200px', 'max': '639px'},  // Extra small screens
         'sm': {'min': '640px', 'max': '767px'},  // Small screens
         'md': {'min': '768px', 'max': '1023px'}, // Medium screens
         'lg': {'min': '1024px', 'max': '1279px'}, // Large screens
