@@ -18,18 +18,18 @@ function Homepage() {
       <Navbar />
 
       <Stack
-        mt={["20vh", "20vh", "35vh", "35vh"]}
+        mt={["30vh", "30vh", "35vh", "35vh"]}
         w={"100%"}
-        marginLeft={"5vh"}
+        marginLeft={{base: "0vh", md:"0vh", lg:"5vh", xl:"5vh"}}
       >
         <Text
-          fontSize={{ base: "50px", md: "80px", lg: "80px", xl: "80px" }}
+          fontSize={{ base: "40px", md: "80px", lg: "80px", xl: "80px" }}
           color={"brand.text2"}
         >
           Hey, I&apos;m Mamadou Sy
         </Text>
         <Text
-          fontSize={{ base: "40px", md: "40px", lg: "40px", xl: "40px" }}
+          fontSize={{ base: "30px", md: "40px", lg: "40px", xl: "40px" }}
           color={"brand.text2"}
         >
           Full Stack Developer, But you can call me Mams

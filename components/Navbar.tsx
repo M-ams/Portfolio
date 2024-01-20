@@ -37,6 +37,20 @@ function Navbar() {
               Home
             </Button>
           </Link>
+          <Link href="/about-me">
+            <Button
+              as="a"
+              bg="bg"
+              _hover={{ bg: "brand.componentbghover" }}
+              color="brand.text2"
+              my={5}
+              w="100%"
+              size={"lg"}
+            >
+              About me
+            </Button>
+          </Link>
+
           <Link href="/projects">
             <Button
               as="a"
@@ -48,20 +62,6 @@ function Navbar() {
               size={"lg"}
             >
               Projects
-            </Button>
-          </Link>
-
-          <Link href="/about-me">
-            <Button
-              as="a"
-              bg="bg"
-              _hover={{ bg: "brand.componentbghover" }}
-              color="brand.text2"
-              my={5}
-              w="100%"
-              size={"lg"}
-            >
-              About
             </Button>
           </Link>
 
