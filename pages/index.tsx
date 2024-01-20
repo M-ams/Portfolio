@@ -17,7 +17,7 @@ export default function Home() {
         setTimeout(() => {
           setShowMams(true);
           Cookies.set("animation", "true", { expires: 1 / 288, path: '' });
-        }, 1000);
+        }, 2000);
       });
     }
   }, [showMams]);
