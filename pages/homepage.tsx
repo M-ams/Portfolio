@@ -10,8 +10,8 @@ function Homepage() {
       <Navbar />
 
       <Stack mt={["20vh", "20vh", "35vh", "35vh"]} w={'100%'} marginLeft={'5vh'}>
-        <Text fontSize="7xl" color={'brand.text2'}>Hey, I&apos;m Mamadou Sy</Text>
-        <Text fontSize="5xl" color={'brand.text2'}>Full Stack Developer, But you can call me Mams</Text>
+        <Text fontSize={{ base: "50px", md: "80px", lg: "80px", xl:'80px' }} color={'brand.text2'}>Hey, I&apos;m Mamadou Sy</Text>
+        <Text fontSize={{ base: "40px", md: "40px", lg: "40px", xl:'40px' }} color={'brand.text2'}>Full Stack Developer, But you can call me Mams</Text>
         <HStack>
   <Button bg="black" color={'white'} leftIcon={<FaGithub />}>
     Github
