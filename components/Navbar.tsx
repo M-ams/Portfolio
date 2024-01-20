@@ -141,7 +141,7 @@ function Navbar() {
             </Button>
           </Link>
 
-          <Link href="/about" passHref>
+          <Link href="/about-me" passHref>
             <Button
               as="a"
               _hover={{ bg: "brand.componentbghover" }}
