@@ -1,9 +1,7 @@
 import Image from "next/image";
 
 import { FaSymfony } from "react-icons/fa";
-import { SiPhp } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io5";
+import { SiTypescript, SiJavascript, SiPhp } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { TbBrandMysql } from "react-icons/tb";
 import { FaNodeJs } from "react-icons/fa";
@@ -11,93 +9,159 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { SiExpress } from "react-icons/si";
 
 import Link from "next/link";
-import { Box, Stack } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Stack,
+  Text,
+  Grid,
+  Heading,
+  Icon,
+  SimpleGrid,
+} from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 
 function AboutMe() {
   return (
     <Stack className=" min-h-screen flex flex-col" bg={"brand.bg"}>
       <Navbar />
-    
-      <p className="text-white text-[3vw] xs:text-[5vw] xs:text-center md:text-center m-20 font-bold cssanimation sequence fadeInBottom">
+      <Heading
+        fontSize={{ base: "20px", md: "35px", lg: "50px", xl: "50px" }}
+        color={"brand.text2"}
+        as={"b"}
+        mt={["10vh", "10vh", "15vh", "15vh"]}
+        ml={{ base: 0, md: 0, lg: "10vh", xl: "10vh" }}
+        mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
+        className="cssanimation sequence fadeInBottom"
+      >
         What about me ?
-      </p>
-      <div className="xl:flex 2xl:flex lg:flex xl:ml-40 2xl:ml-40 lg:ml-40 xs:m-auto md:m-auto gg">
-        <div className="flex flex-col text-gray-500 h-auto xs:w-[80vw] md:w-[80vw]  2xl:w-[60vw] xl:w-[40vw] lg:w-[40vw] xl:text-left 2xl:text-left lg:text-left xs:text-center md:text-center ">
-          <div className="text-[2vw] 2xl:text-[3vw] xs:text-[5vw] md:text-[3vw] mt-4">
-            Well, now you know my nickname but for me it&apos;s not enough, so
-            let&apos;s go.
-          </div>
-          <div className="text-[2vw] xs:text-[5vw] md:text-[3vw] mt-8">
+      </Heading>
+      <Flex>
+        <Flex flexDirection={"column"}>
+          <Text
+            fontSize={{ base: "15px", md: "20px", lg: "20px", xl: "30px" }}
+            color={"brand.text2"}
+            as={"b"}
+            mt={["10vh", "10vh", "5vh", "5vh"]}
+            ml={{ base: 0, md: 0, lg: "18vh", xl: "18vh" }}
+            mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
+            className="cssanimation sequence fadeInBottom"
+          >
             Since childhood I have always had an attraction towards computers.
-            After some adventures, back in{" "}
-            <span className="text-gray-200">2021</span> where I found myself
-            doing a<span className="text-gray-200"> web development</span>{" "}
-            school for a period of 2 years. During which I was able to discover
-            the world of work in this field.
-          </div>
-          <div className="text-[2vw]  xs:text-[5vw] md:text-[3vw] mt-8 mb-4">
-            My main goal these days is to{" "}
-            <span className="text-gray-200">improve</span> my web skills by
-            integrating a company with a{" "}
-            <span className="text-gray-200">passionate</span> team that will
-            make me a better
-            <span className="text-gray-200"> developer</span>
-          </div>
-          <div className="text-[2vw] xs:text-[5vw] md:text-[3vw] mt-8 mb-4">
-            Here is some languages that I have discovered and have been able to
-            practice
-          </div>
-          <div className="xl:flex lg:flex 2xl:flex mt-6">
-            <div className="text-gray-200 flex flex-col m-auto  w-[6vw] float1 xs:w-full md:w-full">
-              <SiPhp className="text-[4vw] xs:text-[12vw] md:text-[8vw] m-auto" />
-              <div className="m-auto">PHP</div>
-            </div>
-            <div className="text-gray-200 flex flex-col m-auto  w-[6vw] float4 xs:w-full md:w-full">
-              <FaSymfony className="text-[4vw] xs:text-[12vw] md:text-[8vw] m-auto" />
-              <div className="m-auto">Symfony</div>
-            </div>
-            <div className="text-gray-200 flex flex-col m-auto  w-[6vw] float5 xs:w-full md:w-full">
-              <IoLogoJavascript className="text-[4vw] xs:text-[12vw] md:text-[8vw] m-auto" />
-              <div className="m-auto">Javascript</div>
-            </div>
-            <div className="text-gray-200 flex flex-col m-auto  w-[6vw] float3 xs:w-full md:w-full">
-              <FaReact className="text-[4vw] xs:text-[12vw] md:text-[8vw] m-auto" />
-              <div className="m-auto">ReactJs</div>
-            </div>
-            <div className="text-gray-200 flex flex-col m-auto  w-[6vw] float2 xs:w-full md:w-full">
-              <SiTypescript className="text-[4vw] xs:text-[12vw] md:text-[8vw] m-auto" />
-              <div className="m-auto">Typescript</div>
-            </div>
-          </div>
+            After some adventures, back in 2021 where I found myself doing a web
+            development school for a period of 2 years. During which I was able
+            to discover the world of work in this field. My main goal these days
+            is to improve my web skills by integrating a company with a
+            passionate team that will make me a better developer. Here is some
+            languages that I have discovered and have been able to practice
+          </Text>
+          <Flex flexDirection={"column"}>
+            <Grid flexDirection={"column"} gap={5}>
+              <Flex
+                alignItems="center"
+                border={"1px solid"}
+                flexDirection={{
+                  base: "column",
+                  md: "column",
+                  lg: "row",
+                  xl: "row",
+                }}
+                justifyContent={{ base: "center", md: "center", lg: "flex-start", xl: "flex-start" }}
+              >
+                <Text
+                  fontSize={{
+                    base: "15px",
+                    md: "20px",
+                    lg: "20px",
+                    xl: "25px",
+                  }}
+                  mt={["10vh", "10vh", "5vh", "5vh"]}
+                  ml={{ base: 0, md: 0, lg: "18vh", xl: "18vh" }}
+                  color={"brand.text2"}
+                >
+                  Languages :
+                </Text>
+                <SimpleGrid
+                  templateColumns={{
+                    base: "repeat(3, 1fr)",
+                    md: "repeat(3, 1fr)",
+                    lg: "repeat(3, 1fr)",
+                    xl: "repeat(3, 1fr)",
 
-          <div className="xl:flex lg:flex 2xl:flex xl:mt-10 2xl:mt-10 lg:mt-10 ">
-            <div className="text-gray-200 flex flex-col m-auto  w-[6vw] float1 xs:w-full md:w-full">
-              <TbBrandMysql className="text-[4vw] xs:text-[12vw] md:text-[8vw] m-auto" />
-              <div className="m-auto">MySQL</div>
-            </div>
-            <div className="text-gray-200 flex flex-col m-auto  w-[6vw] float4 xs:w-full md:w-full">
-              <FaNodeJs className="text-[4vw] xs:text-[12vw] md:text-[8vw] m-auto" />
-              <div className="m-auto">NodeJs</div>
-            </div>
-            <div className="text-gray-200 flex flex-col m-auto  w-[6vw] float2 xs:w-full md:w-full">
-              <TbBrandNextjs className="text-[4vw] xs:text-[12vw] md:text-[8vw] m-auto" />
-              <div className="m-auto">NextJs</div>
-            </div>
-            <div className="text-gray-200 flex flex-col m-auto  w-[6vw] float5 xs:w-full md:w-full">
-              <SiExpress className="text-[4vw] xs:text-[12vw] md:text-[8vw] m-auto" />
-              <div className="m-auto">ExpressJs</div>
-            </div>
-          </div>
-        </div>
-        <Image
-          src="/assets/images/mamsimg.jpg"
-          alt="test"
-          width={400}
-          height={200}
-          className="rounded-3xl m-auto xs:w-[40vw] md:w-[40vw] "
-        />
-      </div>
+                    // Trois colonnes pour les écrans moyens et supérieurs
+                  }}
+                  gap={10}
+                  ml={"5vh"}
+                >
+                  <Icon
+                    as={SiPhp}
+                    boxSize={{ base: "30px", md: "40px", lg: "6vw", xl: "6vw" }}
+                  />
+                  <Icon
+                    as={SiJavascript}
+                    boxSize={{ base: "30px", md: "40px", lg: "6vw", xl: "6vw" }}
+                  />
+                  {/* Ajoutez la troisième icône pour la section "Languages" */}
+                  <Icon
+                    as={FaNodeJs}
+                    boxSize={{ base: "30px", md: "40px", lg: "6vw", xl: "6vw" }}
+                  />
+                  {/* Fin des icônes */}
+                </SimpleGrid>
+              </Flex>
+              <Flex
+                alignItems="center"
+                border={"1px solid"}
+                flexDirection={{
+                  base: "column",
+                  md: "column",
+                  lg: "row",
+                  xl: "row",
+                }}
+              >
+                <Text
+                  fontSize={{
+                    base: "15px",
+                    md: "20px",
+                    lg: "20px",
+                    xl: "25px",
+                  }}
+                  mt={["10vh", "10vh", "5vh", "5vh"]}
+                  ml={{ base: 0, md: 0, lg: "18vh", xl: "18vh" }}
+                  color={"brand.text2"}
+                >
+                  Technos:
+                </Text>
+                <Grid
+                  templateColumns={{
+                    base: "repeat(1, 1fr)",
+                    md: "repeat(3, 1fr)", // Trois colonnes pour les écrans moyens et supérieurs
+                  }}
+                  gap={10}
+                  ml={"5vh"}
+                >
+                  <Icon
+                    as={FaReact}
+                    boxSize={{ base: "30px", md: "40px", lg: "6vw", xl: "6vw" }}
+                  />
+                  <Icon
+                    as={FaSymfony}
+                    boxSize={{ base: "30px", md: "40px", lg: "6vw", xl: "6vw" }}
+                  />
+                  {/* Ajoutez la troisième icône pour la section "Technos" */}
+                  <Icon
+                    as={SiTypescript}
+                    boxSize={{ base: "30px", md: "40px", lg: "6vw", xl: "6vw" }}
+                  />
+                  {/* Fin des icônes */}
+                </Grid>
+              </Flex>
+            </Grid>
+          </Flex>
+        </Flex>
+        image
+      </Flex>
 
       <p className="text-white text-[3vw] xs:text-[5vw] xs:text-center md:text-center m-20 font-bold cssanimation sequence fadeInBottom">
         Where I&apos;ve worked ?

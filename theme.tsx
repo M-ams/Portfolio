@@ -17,6 +17,10 @@ const customTheme = extendTheme({
       text2: "#EDEEF0",
     },
   },
+  fonts: {
+    heading: "'Mallana', sans-serif",
+    body: "'Mallana', sans-serif",
+  },
 });
 
 export default customTheme;
