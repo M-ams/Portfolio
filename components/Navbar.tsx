@@ -17,15 +17,17 @@ function Navbar() {
     <Flex>
       <Flex
         position="fixed"
-        top="2rem"
-        right="4rem"
+        paddingTop={4}
+        paddingRight={10}
         align="center"
         bg="brand.bg"
+        w={["100vw", "100vw", "100vw", "100vw"]}
       >
         {/* Desktop */}
-        <Flex display={["none", "none", "flex", "flex"]}>
+        <Flex display={["none", "none", "flex", "flex"]} ml={"auto"}>
           <Link href="/">
             <Button
+              className="gg"
               bg="bg"
               _hover={{ bg: "brand.componentbghover" }}
               color="brand.text2"
@@ -39,6 +41,7 @@ function Navbar() {
           </Link>
           <Link href="/about-me">
             <Button
+              className="gg2"
               as="a"
               bg="bg"
               _hover={{ bg: "brand.componentbghover" }}
@@ -53,6 +56,7 @@ function Navbar() {
 
           <Link href="/projects">
             <Button
+              className="gg3"
               as="a"
               bg="bg"
               _hover={{ bg: "brand.componentbghover" }}
@@ -67,6 +71,7 @@ function Navbar() {
 
           <Link href="/contact">
             <Button
+              className="gg4"
               as="a"
               bg="bg"
               _hover={{ bg: "brand.componentbghover" }}
@@ -81,10 +86,14 @@ function Navbar() {
         </Flex>
 
         {/* Mobile */}
+
         <IconButton
+        ml={"auto"}
           aria-label="Open Menu"
           size="lg"
-          mr={2}
+          bg={"brand.bg"}
+          color={"brand.text2"}
+          _hover={{ bg: "brand.componentbghover" }}
           icon={<HamburgerIcon />}
           onClick={() => changeDisplay("flex")}
           display={["flex", "flex", "none", "none"]}
@@ -104,10 +113,12 @@ function Navbar() {
         overflowY="auto"
         flexDir="column"
       >
-        <Flex justify="flex-end">
+        <Flex justify="flex">
           <IconButton
-            mt={2}
-            mr={2}
+          ml={"auto"}
+            bg={"brand.bg"}
+            color={"brand.text2"}
+            _hover={{ bg: "brand.componentbghover" }}
             aria-label="Open Menu"
             size="lg"
             icon={<CloseIcon />}
@@ -117,19 +128,57 @@ function Navbar() {
 
         <Flex flexDir="column" align="center">
           <Link href="/" passHref>
-            <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
+            <Button
+              as="a"
+              _hover={{ bg: "brand.componentbghover" }}
+              bg={"brand.bg"}
+              color={"brand.text2"}
+              aria-label="Home"
+              my={5}
+              w="100%"
+            >
               Home
             </Button>
           </Link>
 
           <Link href="/about" passHref>
-            <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
-              About
+            <Button
+              as="a"
+              _hover={{ bg: "brand.componentbghover" }}
+              bg={"brand.bg"}
+              color={"brand.text2"}
+              aria-label="About"
+              my={5}
+              w="100%"
+            >
+              About Me
+            </Button>
+          </Link>
+
+          <Link href="/projects" passHref>
+            <Button
+              as="a"
+              _hover={{ bg: "brand.componentbghover" }}
+              bg={"brand.bg"}
+              color={"brand.text2"}
+              aria-label="About"
+              my={5}
+              w="100%"
+            >
+              Projects
             </Button>
           </Link>
 
           <Link href="/contact" passHref>
-            <Button as="a" variant="ghost" aria-label="Contact" my={5} w="100%">
+            <Button
+              as="a"
+              _hover={{ bg: "brand.componentbghover" }}
+              bg={"brand.bg"}
+              color={"brand.text2"}
+              aria-label="Contact"
+              my={5}
+              w="100%"
+            >
               Contact
             </Button>
           </Link>

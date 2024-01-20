@@ -11,10 +11,14 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { SiExpress } from "react-icons/si";
 
 import Link from "next/link";
+import { Box, Stack } from "@chakra-ui/react";
+import Navbar from "../components/Navbar";
 
 function AboutMe() {
   return (
-    <div className="bg-[#121111] min-h-screen flex flex-col">
+    <Stack className=" min-h-screen flex flex-col" bg={"brand.bg"}>
+      <Navbar />
+    
       <p className="text-white text-[3vw] xs:text-[5vw] xs:text-center md:text-center m-20 font-bold cssanimation sequence fadeInBottom">
         What about me ?
       </p>
@@ -150,7 +154,7 @@ function AboutMe() {
           Resume
         </a>
       </div>
-    </div>
+    </Stack>
   );
 }
 

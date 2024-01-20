@@ -125,10 +125,11 @@
 
 
 .gg {
-  animation: fadeInDown 1.5s ease-in-out;
+  animation: fadeInDown 1s ease-in-out;
 }
-.gg2 { animation: fadeInDown 2s ease-in-out }
-.gg3 { animation: fadeInDown 2.5s ease-in-out }
+.gg2 { animation: fadeInDown 1.25s ease-in-out }
+.gg3 { animation: fadeInDown 1.5s ease-in-out }
+.gg4 { animation: fadeInDown 1.75s ease-in-out }
 
 @keyframes fadeInDown {
   from {

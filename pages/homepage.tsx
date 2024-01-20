@@ -1,12 +1,10 @@
 import Link from "next/link";
 
-import { FaFacebook, FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import {
   Box,
   Button,
-  Container,
-  Flex,
   HStack,
   Stack,
   Text,
@@ -17,7 +15,8 @@ function Homepage() {
     <Box className=" min-h-screen flex" bg={"brand.bg"}>
       <Navbar />
 
-      <Stack
+      <Stack 
+      className="cssanimation sequence fadeInBottom"
         mt={["30vh", "30vh", "35vh", "35vh"]}
         w={"100%"}
         marginLeft={{base: "0vh", md:"0vh", lg:"5vh", xl:"5vh"}}
