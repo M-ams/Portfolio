@@ -51,7 +51,7 @@ function AboutMe() {
       >
         <Flex flexDirection={"column"}>
           <Text
-            fontSize={{ base: "17px", md: "23px", lg: "20px", xl: "30px" }}
+            fontSize={{ base: "17px", md: "23px", lg: "1.8vw", xl: "2.5vw" }}
             color={"brand.text1"}
             mt={["2vh", "2vh", "3vh", "3vh"]}
             ml={{ base: 0, md: 0, lg: "8vh", xl: "8vh" }}
@@ -92,7 +92,7 @@ function AboutMe() {
                     base: "15px",
                     md: "20px",
                     lg: "20px",
-                    xl: "25px",
+                    xl: "40px",
                   }}
                   mt={["3vh", "3vh", "5vh", "5vh"]}
                   ml={{ base: 0, md: 0, lg: "12vh", xl: "12vh" }}
@@ -149,7 +149,7 @@ function AboutMe() {
                     base: "18px",
                     md: "30px",
                     lg: "20px",
-                    xl: "25px",
+                    xl: "40px",
                   }}
                   mt={["3vh", "3vh", "5vh", "5vh"]}
                   ml={{ base: 0, md: 0, lg: "12vh", xl: "12vh" }}
@@ -194,7 +194,7 @@ function AboutMe() {
         <Box m={["auto", "auto", "auto", "auto"]}>
           <Image
             src="/assets/images/avatar.png"
-            width={{ base: "30vw", md: "30vw", lg: "80vw", xl: "90vw" }}
+            width={{ base: "30vw", md: "30vw", lg: "80vw", xl: "80vw" }}
             height={"auto"}
             alt="Me"
             mt={["5vh", "5vh"]}
@@ -228,7 +228,7 @@ function AboutMe() {
         className="cssanimation sequence fadeInBottom"
       >
         <Text
-          fontSize={{ base: "17px", md: "23px", lg: "20px", xl: "30px" }}
+          fontSize={{ base: "17px", md: "23px", lg: "1.8vw", xl: "2.5vw" }}
           textAlign={{ base: "center", md: "center", lg: "left", xl: "left" }}
           color={"brand.text1"}
           mt={["2vh", "2vh", "3vh", "3vh"]}
@@ -254,7 +254,7 @@ function AboutMe() {
         <Box m={["auto", "auto", "auto", "auto"]}>
           <Image
             src="/assets/images/work.png"
-            width={{ base: "30vw", md: "30vw", lg: "80vw", xl: "90vw" }}
+            width={{ base: "30vw", md: "30vw", lg: "80vw", xl: "80vw" }}
             height={"auto"}
             alt="Me"
             mt={["5vh", "5vh"]}
