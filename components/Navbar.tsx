@@ -32,7 +32,7 @@ function Navbar() {
         <Flex align="center" justify="center" ml={"3vh"}>
           <Avatar size={{base:"sm", md:"md", lg:"lg", xl:"xl"  }} src={"assets/images/avatar.png"} mr={2} />
           <Text className="font-semibold" color={"brand.text2"}
-            fontSize={{ base: "1vw", md: "1vw", lg: "1vw", xl: "2vw" }}
+            fontSize={{ base: "2vw", md: "2vw", lg: "1vw", xl: "2vw" }}
           >
             Mams
           </Text>
