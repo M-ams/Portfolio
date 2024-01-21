@@ -254,7 +254,7 @@ function AboutMe() {
         <Box m={["auto", "auto", "auto", "auto"]}>
           <Image
             src="/assets/images/work.png"
-            width={{ base: "30vw", md: "30vw", lg: "80vw", xl: "80vw" }}
+            width={{ base: "30vw", md: "30vw", lg: "80vw", xl: "30vw" }}
             height={"auto"}
             alt="Me"
             mt={["5vh", "5vh"]}

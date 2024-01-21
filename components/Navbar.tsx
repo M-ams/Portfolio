@@ -21,7 +21,7 @@ function Navbar() {
   return (
     <Flex>
       <Flex
-        position="fixed"
+        position="sticky"
         paddingRight={10}
         align="center"
         bg="brand.componentbg"
@@ -30,8 +30,10 @@ function Navbar() {
       >
         {/* Desktop */}
         <Flex align="center" justify="center" ml={"3vh"}>
-          <Avatar size={"md"} src={"assets/images/avatar.png"} mr={2} />
-          <Text className="font-semibold" color={"brand.text2"}>
+          <Avatar size={{base:"sm", md:"md", lg:"lg", xl:"xl"  }} src={"assets/images/avatar.png"} mr={2} />
+          <Text className="font-semibold" color={"brand.text2"}
+            fontSize={{ base: "1vw", md: "1vw", lg: "1vw", xl: "2vw" }}
+          >
             Mams
           </Text>
         </Flex>
