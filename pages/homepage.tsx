@@ -19,7 +19,7 @@ function Homepage() {
       className="cssanimation sequence fadeInBottom"
         mt={["30vh", "30vh", "35vh", "35vh"]}
         w={"100%"}
-        marginLeft={{base: "0vh", md:"0vh", lg:"5vh", xl:"5vh"}}
+        marginLeft={{base: "2vh", md:"2vh", lg:"5vh", xl:"5vh"}}
       >
         <Text
           fontSize={{ base: "40px", md: "80px", lg: "80px", xl: "80px" }}

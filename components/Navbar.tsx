@@ -21,7 +21,7 @@ function Navbar() {
   return (
     <Flex>
       <Flex
-        position="sticky"
+        position="fixed"
         paddingRight={10}
         align="center"
         bg="brand.componentbg"
