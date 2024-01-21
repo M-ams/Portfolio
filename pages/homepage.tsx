@@ -35,7 +35,9 @@ function Homepage() {
         </Text>
         <HStack>
           <Link href={"https://github.com/Mams-sy"} target="_blank">
-            <Button bg="black" color={"white"} leftIcon={<FaGithub />}>
+            <Button bg="black" color={"white"} leftIcon={<FaGithub />}
+          _hover={{ bg: "brand.componentbghover" }}
+             >
               Github
             </Button>
           </Link>

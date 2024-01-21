@@ -5,8 +5,13 @@ import {
   Flex,
   Button,
   IconButton,
+  Avatar,
+  Text,
+  Icon,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 import Link from "next/link";
 
 function Navbar() {
@@ -24,7 +29,36 @@ function Navbar() {
         zIndex={1}
       >
         {/* Desktop */}
-        <Flex display={["none", "none", "flex", "flex"]} ml={"auto"}>
+        <Flex align="center" justify="center" ml={"3vh"}>
+          <Avatar size={"md"} src={"assets/images/avatar.png"} mr={2} />
+          <Text className="font-semibold" color={"brand.text2"}>
+            Mams
+          </Text>
+        </Flex>
+
+        {/* <Flex
+          display={["none", "none", "flex", "flex"]}
+          ml={"auto"}
+          mr={"3vh"}
+          align="center"
+          justify="center"
+          m={"auto"}
+        >
+          <Link href={"https://github.com/Mams-sy"} target="_blank"
+          >
+            <Icon as={FaGithub} w={10} h={10} />
+          </Link>
+          <Link
+            href={"https://www.linkedin.com/in/mamadou-sy/"}
+            target="_blank"
+          >
+            <Icon as={FaLinkedin} w={10} h={10} />
+          </Link>
+        </Flex>  */}
+        
+        <Flex display={["none", "none", "flex", "flex"]}
+          ml={"auto"}
+        >
           <Link href="/">
             <Button
               className="gg"
@@ -116,7 +150,7 @@ function Navbar() {
         <Flex justify="flex">
           <IconButton
             ml={"auto"}
-        bg="brand.componentbg"
+            bg="brand.componentbg"
             color={"brand.text2"}
             _hover={{ bg: "brand.componentbghover" }}
             aria-label="Open Menu"
@@ -131,8 +165,7 @@ function Navbar() {
             <Button
               as="a"
               _hover={{ bg: "brand.componentbghover" }}
-        bg="brand.componentbg"
-              
+              bg="brand.componentbg"
               color={"brand.text2"}
               aria-label="Home"
               my={5}

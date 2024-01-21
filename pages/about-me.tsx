@@ -2,7 +2,7 @@ import { FaSymfony } from "react-icons/fa";
 import { SiTypescript, SiJavascript, SiPhp } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { TbBrandMysql } from "react-icons/tb";
-import { FaNodeJs } from "react-icons/fa";
+import { FaNode } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiExpress } from "react-icons/si";
 
@@ -43,6 +43,7 @@ function AboutMe() {
           lg: "row",
           xl: "row",
         }}
+        textAlign={{ base: "center", md: "center", lg: "left", xl: "left" }}
         mt={["2vh", "2vh", "4vh", "4vh"]}
         ml={{ base: 0, md: 0, lg: "10vh", xl: "10vh" }}
         mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
@@ -78,7 +79,6 @@ function AboutMe() {
             <Grid flexDirection={"column"} gap={5}>
               <Flex
                 alignItems="center"
-                border={"1px solid"}
                 flexDirection={{
                   base: "column",
                   md: "column",
@@ -118,22 +118,24 @@ function AboutMe() {
                   <Icon
                     as={SiPhp}
                     boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
+                    className="float2"
                   />
                   <Icon
                     as={SiJavascript}
                     boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
+                    className="float1"
                   />
                   {/* Ajoutez la troisième icône pour la section "Languages" */}
                   <Icon
                     as={SiTypescript}
                     boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
+                    className="float4"
                   />
                   {/* Fin des icônes */}
                 </SimpleGrid>
               </Flex>
               <Flex
                 alignItems="center"
-                border={"1px solid"}
                 flexDirection={{
                   base: "column",
                   md: "column",
@@ -171,14 +173,17 @@ function AboutMe() {
                   <Icon
                     as={FaReact}
                     boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
+                    className="float3"
                   />
                   <Icon
                     as={FaSymfony}
                     boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
+                    className="float5"
                   />
                   <Icon
-                    as={FaNodeJs}
+                    as={FaNode}
                     boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
+                    className="float2"
                   />
                   {/* Fin des icônes */}
                 </SimpleGrid>
@@ -188,7 +193,7 @@ function AboutMe() {
         </Flex>
         <Box m={["auto", "auto", "auto", "auto"]}>
           <Image
-            src="/assets/images/boy.png"
+            src="/assets/images/avatar.png"
             width={{ base: "30vw", md: "30vw", lg: "80vw", xl: "90vw" }}
             height={"auto"}
             alt="Me"
@@ -197,48 +202,65 @@ function AboutMe() {
         </Box>
       </Flex>
 
-      <p className="text-white text-[3vw] xs:text-[5vw] xs:text-center md:text-center m-20 font-bold cssanimation sequence fadeInBottom">
-        Where I&apos;ve worked ?
-      </p>
-      <div className="xl:flex flex-col 2xl:flex lg:flex xl:ml-40 2xl:ml-40 lg:ml-40 xs:m-auto md:m-auto xs:text-center md:text-center  gg">
-        <p className="text-gray-500 text-[2vw] xs:text-[5vw] md:text-[5vw] bb">
-          Full Stack Web Developer at{" "}
-          <Link
-            href="https://www.uptodo.fr"
-            target="_blank"
-            className="text-gray-200 effect-shine"
-          >
-            UPTODO
-          </Link>
-        </p>
-        <p className="text-gray-200 xl:text-[2vw] 2xl:text-[2vw] lg:text-[2vw] 2xl:ml-[1vw] xl:ml-[1vw] lg:ml-[1vw]">
-          Sep 2022 - Nov 2023
-        </p>
-      </div>
-      <div className="xl:flex 2xl:flex lg:flex xl:ml-60 2xl:ml-60 lg:ml-60 xs:m-auto md:m-auto gg">
-        <div className="flex flex-col text-gray-500 h-auto xs:w-[80vw] md:w-[80vw]  2xl:w-[40vw] xl:w-[40vw] lg:w-[40vw] xl:text-left 2xl:text-left lg:text-left xs:text-center md:text-center">
-          <div className="text-[2vw] xs:text-[5vw] mt-8">
-            At uptodo I participated in the development of the{" "}
-            <span className="text-gray-200">Actadat </span>
-            software. The languages were{" "}
-            <span className="text-gray-200">Symfony</span> and{" "}
-            <span className="text-gray-200">Javascript</span>
-          </div>
-          <div className="text-[2vw] xs:text-[5vw] mt-4">
-            My missions were to develop{" "}
-            <span className="text-gray-200">new features</span> based on
-            customer feedback and update them. I also participated in the
-            meetings to reflect on the application evolution perspectives.
-          </div>
-          <div className="text-[2vw] xs:text-[5vw] mt-4">
-            This very <span className="text-gray-200">enriching</span> first
-            experience allowed me to develop my skills, see how{" "}
-            <span className="text-gray-200">software development</span> works
-            with production etc ... and prepare myself for the professional
-            world.
-          </div>
-        </div>
-      </div>
+      <Heading
+        fontSize={{ base: "20px", md: "35px", lg: "50px", xl: "50px" }}
+        color={"brand.text2"}
+        as={"b"}
+        mt={["10vh", "10vh", "15vh", "15vh"]}
+        ml={{ base: 0, md: 0, lg: "10vh", xl: "10vh" }}
+        mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
+        className="cssanimation sequence fadeInBottom"
+      >
+        Where I&apos;ve worked?
+      </Heading>
+      <Flex
+        flexDirection={{
+          base: "column",
+          md: "column",
+          lg: "row",
+          xl: "row",
+        }}
+        textAlign={{ base: "center", md: "center", lg: "left", xl: "left" }}
+        mt={["2vh", "2vh", "4vh", "4vh"]}
+        ml={{ base: 0, md: 0, lg: "10vh", xl: "10vh" }}
+        mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
+        mb={["5vh", "5vh", "10vh", "10vh"]}
+        className="cssanimation sequence fadeInBottom"
+      >
+        <Text
+          fontSize={{ base: "17px", md: "23px", lg: "20px", xl: "30px" }}
+          textAlign={{ base: "center", md: "center", lg: "left", xl: "left" }}
+          color={"brand.text1"}
+          mt={["2vh", "2vh", "3vh", "3vh"]}
+          ml={{ base: 0, md: 0, lg: "8vh", xl: "8vh" }}
+          mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
+          className="cssanimation sequence fadeInBottom font-semibold"
+        >
+          <Text>
+            At uptodo I participated in the development of the Actadat software.
+            The languages were Symfony and Javascript
+          </Text>
+          <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
+            My missions were to develop new features based on customer feedback
+            and update them. I also participated in the meetings to reflect on
+            the application evolution perspectives.
+          </Text>
+          <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
+            This very enriching first experience allowed me to develop my
+            skills, see how software development works with production etc ...
+            and prepare myself for the professional world.
+          </Text>
+        </Text>
+        <Box m={["auto", "auto", "auto", "auto"]}>
+          <Image
+            src="/assets/images/work.png"
+            width={{ base: "30vw", md: "30vw", lg: "80vw", xl: "90vw" }}
+            height={"auto"}
+            alt="Me"
+            mt={["5vh", "5vh"]}
+          />
+        </Box>
+      </Flex>
     </Stack>
   );
 }
