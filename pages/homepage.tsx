@@ -34,7 +34,7 @@ function Homepage() {
           Full Stack Developer, But you can call me Mams
         </Text>
         <HStack>
-          <Link href={"https://github.com/Mams-sy"} target="_blank">
+          <Link href={"https://github.com/M-ams"} target="_blank">
             <Button bg="black" color={"white"} leftIcon={<FaGithub />}
           _hover={{ bg: "brand.componentbghover" }}
              >
