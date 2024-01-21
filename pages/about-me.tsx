@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { FaSymfony } from "react-icons/fa";
 import { SiTypescript, SiJavascript, SiPhp } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
@@ -19,6 +17,7 @@ import {
   Heading,
   Icon,
   SimpleGrid,
+  Image,
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 
@@ -37,26 +36,45 @@ function AboutMe() {
       >
         What about me ?
       </Heading>
-      <Flex>
+      <Flex
+        flexDirection={{
+          base: "column",
+          md: "column",
+          lg: "row",
+          xl: "row",
+        }}
+        mt={["2vh", "2vh", "4vh", "4vh"]}
+        ml={{ base: 0, md: 0, lg: "10vh", xl: "10vh" }}
+        mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
+        className="cssanimation sequence fadeInBottom"
+      >
         <Flex flexDirection={"column"}>
           <Text
-            fontSize={{ base: "15px", md: "20px", lg: "20px", xl: "30px" }}
-            color={"brand.text2"}
-            as={"b"}
-            mt={["10vh", "10vh", "5vh", "5vh"]}
-            ml={{ base: 0, md: 0, lg: "18vh", xl: "18vh" }}
+            fontSize={{ base: "17px", md: "23px", lg: "20px", xl: "30px" }}
+            color={"brand.text1"}
+            mt={["2vh", "2vh", "3vh", "3vh"]}
+            ml={{ base: 0, md: 0, lg: "8vh", xl: "8vh" }}
             mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
-            className="cssanimation sequence fadeInBottom"
+            className="cssanimation sequence fadeInBottom font-semibold"
           >
-            Since childhood I have always had an attraction towards computers.
-            After some adventures, back in 2021 where I found myself doing a web
-            development school for a period of 2 years. During which I was able
-            to discover the world of work in this field. My main goal these days
-            is to improve my web skills by integrating a company with a
-            passionate team that will make me a better developer. Here is some
-            languages that I have discovered and have been able to practice
+            <Text>
+              Since childhood I have always had an attraction towards computers.
+              After some adventures, back in 2021 where I found myself doing a
+              web development school for a period of 2 years.
+            </Text>
+            <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
+              During which I was able to discover the world of work in this
+              field. My main goal these days is to improve my web skills by
+              integrating a company with a passionate team that will make me a
+              better developer.
+            </Text>
+            <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
+              Here is some languages that I have discovered and have been able
+              to practice
+            </Text>
           </Text>
-          <Flex flexDirection={"column"}>
+
+          <Flex flexDirection={"column"} mt={["2vh", "2vh", "3vh", "3vh"]}>
             <Grid flexDirection={"column"} gap={5}>
               <Flex
                 alignItems="center"
@@ -67,7 +85,7 @@ function AboutMe() {
                   lg: "row",
                   xl: "row",
                 }}
-                justifyContent={{ base: "center", md: "center", lg: "flex-start", xl: "flex-start" }}
+                textAlign="center"
               >
                 <Text
                   fontSize={{
@@ -76,9 +94,10 @@ function AboutMe() {
                     lg: "20px",
                     xl: "25px",
                   }}
-                  mt={["10vh", "10vh", "5vh", "5vh"]}
-                  ml={{ base: 0, md: 0, lg: "18vh", xl: "18vh" }}
+                  mt={["3vh", "3vh", "5vh", "5vh"]}
+                  ml={{ base: 0, md: 0, lg: "12vh", xl: "12vh" }}
                   color={"brand.text2"}
+                  className="font-semibold"
                 >
                   Languages :
                 </Text>
@@ -92,20 +111,22 @@ function AboutMe() {
                     // Trois colonnes pour les écrans moyens et supérieurs
                   }}
                   gap={10}
-                  ml={"5vh"}
+                  ml={{ base: 0, md: 0, lg: "5vh", xl: "5vh" }}
+                  mt={{ base: "2vh", md: "2vh" }}
+                  color={"brand.text2"}
                 >
                   <Icon
                     as={SiPhp}
-                    boxSize={{ base: "30px", md: "40px", lg: "6vw", xl: "6vw" }}
+                    boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
                   />
                   <Icon
                     as={SiJavascript}
-                    boxSize={{ base: "30px", md: "40px", lg: "6vw", xl: "6vw" }}
+                    boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
                   />
                   {/* Ajoutez la troisième icône pour la section "Languages" */}
                   <Icon
-                    as={FaNodeJs}
-                    boxSize={{ base: "30px", md: "40px", lg: "6vw", xl: "6vw" }}
+                    as={SiTypescript}
+                    boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
                   />
                   {/* Fin des icônes */}
                 </SimpleGrid>
@@ -119,48 +140,61 @@ function AboutMe() {
                   lg: "row",
                   xl: "row",
                 }}
+                textAlign="center"
               >
                 <Text
                   fontSize={{
-                    base: "15px",
-                    md: "20px",
+                    base: "18px",
+                    md: "30px",
                     lg: "20px",
                     xl: "25px",
                   }}
-                  mt={["10vh", "10vh", "5vh", "5vh"]}
-                  ml={{ base: 0, md: 0, lg: "18vh", xl: "18vh" }}
+                  mt={["3vh", "3vh", "5vh", "5vh"]}
+                  ml={{ base: 0, md: 0, lg: "12vh", xl: "12vh" }}
                   color={"brand.text2"}
+                  className="font-semibold"
                 >
-                  Technos:
+                  Frameworks :
                 </Text>
-                <Grid
+                <SimpleGrid
                   templateColumns={{
-                    base: "repeat(1, 1fr)",
-                    md: "repeat(3, 1fr)", // Trois colonnes pour les écrans moyens et supérieurs
+                    base: "repeat(3, 1fr)",
+                    md: "repeat(3, 1fr)",
+                    lg: "repeat(3, 1fr)",
+                    xl: "repeat(3, 1fr)",
                   }}
                   gap={10}
-                  ml={"5vh"}
+                  ml={{ base: 0, md: 0, lg: "5vh", xl: "5vh" }}
+                  mt={{ base: "2vh", md: "2vh" }}
+                  color={"brand.text2"}
                 >
                   <Icon
                     as={FaReact}
-                    boxSize={{ base: "30px", md: "40px", lg: "6vw", xl: "6vw" }}
+                    boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
                   />
                   <Icon
                     as={FaSymfony}
-                    boxSize={{ base: "30px", md: "40px", lg: "6vw", xl: "6vw" }}
+                    boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
                   />
-                  {/* Ajoutez la troisième icône pour la section "Technos" */}
                   <Icon
-                    as={SiTypescript}
-                    boxSize={{ base: "30px", md: "40px", lg: "6vw", xl: "6vw" }}
+                    as={FaNodeJs}
+                    boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
                   />
                   {/* Fin des icônes */}
-                </Grid>
+                </SimpleGrid>
               </Flex>
             </Grid>
           </Flex>
         </Flex>
-        image
+        <Box m={["auto", "auto", "auto", "auto"]}>
+          <Image
+            src="/assets/images/boy.png"
+            width={{ base: "30vw", md: "30vw", lg: "80vw", xl: "90vw" }}
+            height={"auto"}
+            alt="Me"
+            mt={["5vh", "5vh"]}
+          />
+        </Box>
       </Flex>
 
       <p className="text-white text-[3vw] xs:text-[5vw] xs:text-center md:text-center m-20 font-bold cssanimation sequence fadeInBottom">
@@ -204,19 +238,6 @@ function AboutMe() {
             world.
           </div>
         </div>
-      </div>
-      <div className="flex m-auto mt-10 space-x-6 cssanimation sequence fadeInBottom">
-        <Link href="/" className="btn btn--stripe btn--radius 2xl:text-[2vw]">
-          Home
-        </Link>
-
-        <a
-          href="/assets/cv/cv.pdf"
-          target="_blank"
-          className="btn btn--stripe btn--radius 2xl:text-[2vw]"
-        >
-          Resume
-        </a>
       </div>
     </Stack>
   );
