@@ -17,11 +17,11 @@ function Navbar() {
     <Flex>
       <Flex
         position="fixed"
-        paddingTop={4}
         paddingRight={10}
         align="center"
-        bg="brand.bg"
+        bg="brand.componentbg"
         w={["100vw", "100vw", "100vw", "100vw"]}
+        zIndex={1}
       >
         {/* Desktop */}
         <Flex display={["none", "none", "flex", "flex"]} ml={"auto"}>
@@ -88,10 +88,10 @@ function Navbar() {
         {/* Mobile */}
 
         <IconButton
-        ml={"auto"}
+          ml={"auto"}
           aria-label="Open Menu"
           size="lg"
-          bg={"brand.bg"}
+          bg="brand.componentbg"
           color={"brand.text2"}
           _hover={{ bg: "brand.componentbghover" }}
           icon={<HamburgerIcon />}
@@ -104,8 +104,8 @@ function Navbar() {
       <Flex
         w="100vw"
         display={display}
-        bgColor="brand.bg"
-        zIndex={20}
+        bg="brand.componentbg"
+        zIndex={1}
         h="100vh"
         pos="fixed"
         top="0"
@@ -115,8 +115,8 @@ function Navbar() {
       >
         <Flex justify="flex">
           <IconButton
-          ml={"auto"}
-            bg={"brand.bg"}
+            ml={"auto"}
+        bg="brand.componentbg"
             color={"brand.text2"}
             _hover={{ bg: "brand.componentbghover" }}
             aria-label="Open Menu"
@@ -131,7 +131,8 @@ function Navbar() {
             <Button
               as="a"
               _hover={{ bg: "brand.componentbghover" }}
-              bg={"brand.bg"}
+        bg="brand.componentbg"
+              
               color={"brand.text2"}
               aria-label="Home"
               my={5}
@@ -145,7 +146,7 @@ function Navbar() {
             <Button
               as="a"
               _hover={{ bg: "brand.componentbghover" }}
-              bg={"brand.bg"}
+              bg="brand.componentbg"
               color={"brand.text2"}
               aria-label="About"
               my={5}
@@ -159,7 +160,7 @@ function Navbar() {
             <Button
               as="a"
               _hover={{ bg: "brand.componentbghover" }}
-              bg={"brand.bg"}
+              bg="brand.componentbg"
               color={"brand.text2"}
               aria-label="About"
               my={5}
@@ -173,7 +174,7 @@ function Navbar() {
             <Button
               as="a"
               _hover={{ bg: "brand.componentbghover" }}
-              bg={"brand.bg"}
+              bg="brand.componentbg"
               color={"brand.text2"}
               aria-label="Contact"
               my={5}
