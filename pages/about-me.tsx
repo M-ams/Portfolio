@@ -90,7 +90,7 @@ function AboutMe() {
                 <Text
                   fontSize={{
                     base: "15px",
-                    md: "20px",
+                    md: "30px",
                     lg: "20px",
                     xl: "40px",
                   }}
