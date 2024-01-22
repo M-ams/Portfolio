@@ -213,6 +213,7 @@ function AboutMe() {
       >
         Where I&apos;ve worked?
       </Heading>
+
       <Flex
         flexDirection={{
           base: "column",
@@ -236,7 +237,17 @@ function AboutMe() {
           mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
           className="cssanimation sequence fadeInBottom font-semibold"
         >
-          <Text>
+          <Flex flexDirection={"column"}
+          color={"brand.text2"}>
+            <Text>Full Stack Developer At <Link
+              href={"https://www.uptodo.fr/"}
+              target="_blank"
+              className="text-white"
+            >Uptodo</Link></Text>
+
+            <Text>Sep 2022 - Nov 2023 </Text>
+          </Flex>
+          <Text mt={["3vh", "3vh", "4vh", "4vh"]}>
             At uptodo I participated in the development of the Actadat software.
             The languages were Symfony and Javascript
           </Text>
