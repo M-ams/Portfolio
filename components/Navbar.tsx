@@ -98,6 +98,21 @@ function Navbar() {
               Contact
             </Button>
           </Link>
+          <Link href="/assets/cv/cv.pdf" target="_blank">
+            <Button
+              className="gg4"
+              bg="brand.border"
+              _hover={{ bg: "brand.border1" }}
+              color="brand.text2"
+              my={5}
+              w="100%"
+              size={"lg"}
+              border={"2px solid"}
+              borderColor={"brand.border3"}
+            >
+              CV
+            </Button>
+          </Link>
         </Flex>
 
         {/* Mobile */}
@@ -192,6 +207,20 @@ function Navbar() {
               w="100%"
             >
               Contact
+            </Button>
+          </Link>
+          <Link href="/assets/cv/cv.pdf" target="_blank" passHref>
+            <Button
+              _hover={{ bg: "brand.componentbghover" }}
+              bg="brand.border"
+              color={"brand.text2"}
+              aria-label="Contact"
+              my={5}
+              w="100%"
+              border={"2px solid"}
+              borderColor={"brand.border3"}
+            >
+              CV
             </Button>
           </Link>
         </Flex>
