@@ -183,7 +183,7 @@ function Projects() {
         </Flex>
       </Flex>
 
-      {/* <Flex
+      <Flex
         flexDirection={"column"}
         textAlign={"center"}
         mt={"10vh"}
@@ -217,7 +217,7 @@ function Projects() {
           w={"90vw"}
         >
           <Flex flexDirection={"column"}>
-            <Text
+            <Box
               fontSize={{ base: "17px", md: "23px", lg: "1.2vw", xl: "2vw" }}
               color={"brand.text1"}
               mt={["2vh", "2vh", "3vh", "3vh"]}
@@ -235,7 +235,7 @@ function Projects() {
                 the development of{" "}
                 <span className="actcolor">new features</span>.
               </Text>
-            </Text>
+            </Box>
 
             <Flex flexDirection={"column"} mt={["2vh", "2vh", "3vh", "3vh"]}>
               <Grid flexDirection={"column"} gap={5}>
@@ -318,7 +318,7 @@ function Projects() {
             />
           </Box>
         </Flex>
-      </Flex>  */}
+      </Flex> 
     </Box>
   );
 }
