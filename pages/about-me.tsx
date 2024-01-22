@@ -237,8 +237,7 @@ function AboutMe() {
           mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
           className="cssanimation sequence fadeInBottom font-semibold"
         >
-          <Flex flexDirection={"column"}
-          color={"brand.text2"}>
+          <Flex flexDirection={"column"}>
             <Text>Full Stack Developer At <Link
               href={"https://www.uptodo.fr/"}
               target="_blank"
