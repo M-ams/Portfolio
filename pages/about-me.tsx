@@ -1,10 +1,5 @@
-import { FaSymfony } from "react-icons/fa";
-import { SiTypescript, SiJavascript, SiPhp } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { TbBrandMysql } from "react-icons/tb";
-import { FaNode } from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiExpress } from "react-icons/si";
+import { SiTypescript, SiJavascript, SiPhp, SiMysql } from "react-icons/si";
+import { FaReact, FaNode, FaSymfony } from "react-icons/fa";
 
 import Link from "next/link";
 import {
@@ -23,7 +18,7 @@ import Navbar from "../components/Navbar";
 
 function AboutMe() {
   return (
-    <Stack className=" min-h-screen flex flex-col" bg={"brand.bg"}>
+    <Stack className=" min-h-screen flex flex-col optima" bg={"brand.bg"}>
       <Navbar />
       <Heading
         fontSize={{ base: "20px", md: "35px", lg: "50px", xl: "50px" }}
@@ -103,10 +98,10 @@ function AboutMe() {
                 </Text>
                 <SimpleGrid
                   templateColumns={{
-                    base: "repeat(3, 1fr)",
-                    md: "repeat(3, 1fr)",
-                    lg: "repeat(3, 1fr)",
-                    xl: "repeat(3, 1fr)",
+                    base: "repeat(4, 1fr)",
+                    md: "repeat(4, 1fr)",
+                    lg: "repeat(4, 1fr)",
+                    xl: "repeat(4, 1fr)",
 
                     // Trois colonnes pour les écrans moyens et supérieurs
                   }}
@@ -125,13 +120,17 @@ function AboutMe() {
                     boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
                     className="float1"
                   />
-                  {/* Ajoutez la troisième icône pour la section "Languages" */}
+                  
                   <Icon
                     as={SiTypescript}
                     boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
                     className="float4"
                   />
-                  {/* Fin des icônes */}
+                  <Icon
+                    as={SiMysql}
+                    boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
+                    className="float3"
+                  />
                 </SimpleGrid>
               </Flex>
               <Flex

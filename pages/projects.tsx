@@ -1,127 +1,324 @@
 import Link from "next/link";
-import Image from "next/image";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiPhp,
+  SiMysql,
+  SiPrisma,
+  SiExpress,
+} from "react-icons/si";
+import { FaReact, FaNode, FaSymfony } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiExpress } from "react-icons/si";
-import { SiPrisma } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { FaSymfony } from "react-icons/fa";
-import { SiPhp } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io5";
+
+import {
+  Box,
+  Container,
+  Flex,
+  Stack,
+  Text,
+  Grid,
+  Heading,
+  Icon,
+  SimpleGrid,
+  Image,
+} from "@chakra-ui/react";
+import Navbar from "../components/Navbar";
 
 function Projects() {
   return (
-    <div className="bg-[#121111] min-h-screen flex flex-col">
-      <div className="">
-        <p className="text-white text-[3vw] xs:text-[5vw] xs:text-center md:text-center m-20 font-bold cssanimation sequence fadeInBottom">
-          Some of my Works
-        </p>
-      </div>
+    <Stack className=" min-h-screen flex flex-col optima" bg={"brand.bg"}>
+      <Navbar />
 
-      <div className="flex flex-col">
-        <div className="divdcgg gg xs:text-center xs:w-[40vw] xs:m-auto xs:item-center md:w-[40vw] md:m-auto">
-          <Link
-            href="https://dc.gg"
-            className="text-white text-[3vw] md:text-[5vw] xs:text-[8vw] xl:ml-[10vw] lg:ml-[10vw] 2xl:ml-[10vw] dcgg items-center justify-center flex 2xl:w-[15Vw] xl:w-[15Vw] xl:h-[10vh] 2xl:h-[10vh] lg:w-[15vw] lg:h-[10vh] "
-            target="_blank"
+      <Heading
+        fontSize={{ base: "20px", md: "35px", lg: "50px", xl: "50px" }}
+        color={"brand.text2"}
+        as={"b"}
+        mt={["10vh", "10vh", "15vh", "15vh"]}
+        ml={{ base: 0, md: 0, lg: "10vh", xl: "10vh" }}
+        mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
+        className="cssanimation sequence fadeInBottom"
+      >
+        Some of my Works{" "}
+      </Heading>
+
+      <Flex
+        flexDirection={"column"}
+        textAlign={"center"}
+        mt={"10vh"}
+      >
+        <Link href={"https://dc.gg"} target="_blank">
+          <Text
+            color={"brand.text2"}
+            as={"b"}
+            className="cssanimation sequence fadeInBottom"
+            fontSize={{ base: "20px", md: "35px", lg: "50px", xl: "50px" }}
+            mt={["10vh", "10vh", "15vh", "15vh"]}
+            margin={"auto"}
+            w={{ base: "30vw", md: "30vw", lg: "20vw", xl: "20vw" }}
+            _hover={{ color: "#6f4cf9" }}
           >
             DC.GG
-          </Link>
-        </div>
+          </Text>
+        </Link>
+        <Flex
+          flexDirection={{
+            base: "column",
+            md: "column",
+            lg: "row",
+            xl: "row",
+          }}
+          textAlign={{ base: "center", md: "center", lg: "left", xl: "left" }}
+          mt={["2vh", "2vh", "4vh", "4vh"]}
+          m={"auto"}
+          mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
+          className="cssanimation sequence fadeInBottom"
+          w={"90vw"}
+        >
+          <Flex flexDirection={"column"}>
+            <Text
+              fontSize={{ base: "17px", md: "23px", lg: "1.2vw", xl: "2vw" }}
+              color={"brand.text1"}
+              mt={["2vh", "2vh", "3vh", "3vh"]}
+              mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
+              className="cssanimation sequence fadeInBottom font-semibold"
+            >
+              <Text>
+                <span className="dark-purple">DC.GG</span> is a group
+                end-of-studies project. During this project, I had the
+                opportunity to collaborate with a team of 4 individuals,
+                focusing mainly on the{" "}
+                <span className="dark-purple">front-end</span> aspect.
+              </Text>
+              <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
+                The purpose of this project is to enable Discord servers to
+                <span className="dark-purple">generate</span> their own{" "}
+                <span className="dark-purple">
+                  personalized invitation links
+                </span>{" "}
+                with a functionnality of real-time tracking.
+              </Text>
+            </Text>
 
-        <div className=" 2xl:flex 2xl:h-[50vh] 2xl:ml-[17vw] xl:flex xl:h-[50vh] xl:ml-[17vw] lg:flex lg:h-[50vh] lg:ml-[17vw] m-5 xs:flex-col xs:text-center md:flex-col md:justify-center  ">
-          <div className="xl:flex xl:flex-col 2xl:flex 2xl:flex-col xs:flex-col xl:text-[2vw] 2xl:text-[2vw] lg:flex lg:flex-col lg:text-[2vw] xs:text-[3vw] font-normal xl:w-[40vw] 2xl:w-[40vw] text-center gg2 optima ">
-            <div className="dcggtext text-white  m-auto 2xl:text-left xl:text-left lg:text-left">
-              <span className="dark-purple">DC.GG</span> is a group
-              end-of-studies project. During this project, I had the opportunity
-              to collaborate with a team of 4 individuals, focusing mainly on
-              the <span className="dark-purple">front-end</span> aspect. The
-              purpose of this project is to enable Discord servers to generate
-              their own{" "}
-              <span className="dark-purple">personalized invitation links</span>{" "}
-              with a functionnality of real-time tracking.
-            </div>
-            <span className="dark-purple xl:mb-10 lg:mb-10 flex dark-purple mt-10 mb-10">
-              <div className=" flex flex-col m-auto xs:text-[6vw] md:text-[4vw] text-[2vw] w-full float1">
-                <SiPrisma className=" m-auto" />
-                <div className="">Prisma</div>
-              </div>
-              <div className="flex flex-col m-auto xs:text-[6vw] md:text-[4vw]  text-[2vw] w-full float4">
-                <SiTypescript className=" m-auto " />
-                <div className="">Typescript</div>
-              </div>
-              <div className="flex flex-col m-auto xs:text-[6vw] md:text-[4vw] text-[2vw] w-full float2">
-                <TbBrandNextjs className="m-auto"  />
-                <div className="">NextJs</div>
-              </div>
-              <div className="flex flex-col m-auto xs:text-[6vw] md:text-[4vw] text-[2vw] w-full float5">
-                <SiExpress className=" m-auto" />
-                <div className="">ExpressJs</div>
-              </div>
-            </span>
-          </div>
-          <Image
-            height={400}
-            width={400}
-            alt="dcgg"
-            src="/assets/images/dcgg.png"
-            className="2xl:ml-10 2xl:w-[40vw] xl:ml-10  xl:w-[40vw] lg:ml-10  lg:w-[40vw] m-auto md:mt-10 gg3"
-          />
-        </div>
-      </div>
+            <Flex flexDirection={"column"} mt={["2vh", "2vh", "3vh", "3vh"]}>
+              <Grid flexDirection={"column"} gap={5}>
+                <Flex
+                  alignItems="center"
+                  flexDirection={{
+                    base: "column",
+                    md: "column",
+                    lg: "row",
+                    xl: "row",
+                  }}
+                  textAlign="center"
+                  m={"auto"}
+                >
+                  <SimpleGrid
+                    templateColumns={{
+                      base: "repeat(4, 1fr)",
+                      md: "repeat(4, 1fr)",
+                      lg: "repeat(4, 1fr)",
+                      xl: "repeat(4, 1fr)",
 
-      <div className="flex flex-col xl:mt-[18vh] lg:mt-[18vh] 2xl:mt-[18vh]">
-        <div className="gg xs:text-center xs:w-[40vw] xs:m-auto xs:item-center md:w-[40vw] md:m-auto">
-          <Link
-            href="https://www.actadat.fr"
-            className="text-white text-[3vw] xs:text-[8vw] md:text-[5vw] xl:ml-[10vw] lg:ml-[10vw] 2xl:ml-[10vw] actadat items-center justify-center flex 2xl:w-[15Vw] xl:w-[15Vw] xl:h-[10vh] 2xl:h-[10vh] lg:w-[15Vw] lg:h-[10vh]"
-            target="_blank"
+                      // Trois colonnes pour les écrans moyens et supérieurs
+                    }}
+                    gap={10}
+                    ml={{ base: 0, md: 0, lg: "5vh", xl: "5vh" }}
+                    mt={{ base: "2vh", md: "2vh" }}
+                    color={"brand.text2"}
+                  >
+                    <Icon
+                      as={SiTypescript}
+                      boxSize={{
+                        base: "9vw",
+                        md: "10vw",
+                        lg: "6vw",
+                        xl: "6vw",
+                      }}
+                      className="float2"
+                    />
+                    <Icon
+                      as={SiExpress}
+                      boxSize={{
+                        base: "9vw",
+                        md: "10vw",
+                        lg: "6vw",
+                        xl: "6vw",
+                      }}
+                      className="float1"
+                    />
+
+                    <Icon
+                      as={SiPrisma}
+                      boxSize={{
+                        base: "9vw",
+                        md: "10vw",
+                        lg: "6vw",
+                        xl: "6vw",
+                      }}
+                      className="float4"
+                    />
+                    <Icon
+                      as={TbBrandNextjs}
+                      boxSize={{
+                        base: "8vw",
+                        md: "10vw",
+                        lg: "6vw",
+                        xl: "6vw",
+                      }}
+                      className="float3"
+                    />
+                  </SimpleGrid>
+                </Flex>
+              </Grid>
+            </Flex>
+          </Flex>
+          <Box m={["auto", "auto", "auto", "auto"]}>
+            <Image
+              src="/assets/images/dcgg.png"
+              width={{ base: "50vw", md: "60vw", lg: "80vw", xl: "100vw" }}
+              height={"auto"}
+              alt="Me"
+              mt={["5vh", "5vh"]}
+            />
+          </Box>
+        </Flex>
+      </Flex>
+
+      <Flex
+        flexDirection={"column"}
+        textAlign={"center"}
+        mt={"10vh"}
+        mb={"5vh"}
+      >
+        <Link href={"https://dc.gg"} target="_blank">
+          <Text
+            color={"brand.text2"}
+            as={"b"}
+            className="cssanimation sequence fadeInBottom"
+            fontSize={{ base: "20px", md: "35px", lg: "50px", xl: "50px" }}
+            mt={["10vh", "10vh", "15vh", "15vh"]}
+            margin={"auto"}
+            w={{ base: "30vw", md: "30vw", lg: "20vw", xl: "20vw" }}
+            _hover={{ color: "#02b0de" }}
           >
             ACTADAT
-          </Link>
-        </div>
-
-        <div className="2xl:flex 2xl:h-[50vh] 2xl:ml-[17vw] xl:flex xl:h-[50vh] xl:ml-[17vw] lg:flex lg:h-[50vh] lg:ml-[17vw] m-5 xs:flex-col xs:text-center md:flex-col md:justify-center ">
-          <div className="xl:flex xl:flex-col 2xl:flex 2xl:flex-col xs:flex-col xl:text-[2vw] 2xl:text-[2vw] lg:flex lg:flex-col lg:text-[2vw] xs:text-[3vw] font-normal xl:w-[40vw] 2xl:w-[40vw] text-center gg2 optima  ">
-            <div className="dcggtext text-white  m-auto 2xl:text-left xl:text-left lg:text-left">
-              <span className="actcolor">Actadat</span> was the software I was
-              working on during my{" "}
-              <span className="actcolor">internship</span>. This software is
-              for
-              <span className="actcolor"> accounting firms</span>. It allows you
-              to manage your accounting firm and have a reliable and complete
-              monitoring of accounting records. I participated in the
-              development of <span className="actcolor">new features</span>.
-            </div>
-            <span className="dark-purple flex actcolor mt-10">
-              <div className=" flex flex-col m-auto xs:text-[6vw] md:text-[4vw] text-[2vw] w-full float1 ">
-                <SiPhp className=" m-auto" />
-                <div className="">Php</div>
-              </div>
-              <div className="flex flex-col m-auto xs:text-[6vw] md:text-[4vw] text-[2vw] w-full float4">
-                <FaSymfony className="m-auto" />
-                <div className="">Symfony</div>
-              </div>
-              <div className="flex flex-col m-auto xs:text-[6vw] md:text-[4vw]  text-[2vw] w-full float2">
-                <IoLogoJavascript className="m-auto" />
-                <div className="">Javascript</div>
-              </div>
-            </span>
-          </div>
-          <Image
-            height={400}
-            width={400}
-            alt="dcgg"
-            src="/assets/images/actadat.png"
-            className=" m-auto 2xl:ml-10  2xl:w-[40vw] xl:ml-10  xl:w-[40vw] lg:ml-10  lg:w-[40vw] md:mt-10 gg3"
-          />
-        </div>
-      </div>
-      <div className="flex m-auto mt-10 space-x-6 cssanimation sequence fadeInBottom">
-        <Link href="/" className="btn btn--stripe btn--radius 2xl:text-[2vw]">
-          Home
+          </Text>
         </Link>
-      </div>
-    </div>
+        <Flex
+          flexDirection={{
+            base: "column",
+            md: "column",
+            lg: "row",
+            xl: "row",
+          }}
+          textAlign={{ base: "center", md: "center", lg: "left", xl: "left" }}
+          mt={["2vh", "2vh", "4vh", "4vh"]}
+          className="cssanimation sequence fadeInBottom"
+          m={"auto"}
+          w={"90vw"}
+        >
+          <Flex flexDirection={"column"}>
+            <Text
+              fontSize={{ base: "17px", md: "23px", lg: "1.2vw", xl: "2vw" }}
+              color={"brand.text1"}
+              mt={["2vh", "2vh", "3vh", "3vh"]}
+              className="cssanimation sequence fadeInBottom font-semibold"
+            >
+              <Text>
+                <span className="actcolor">Actadat</span> was the software I was
+                working on during my <span className="actcolor">internship</span>. This software is
+                for accounting firms.
+              </Text>
+              <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
+                It allows you to manage your accounting firm and have a reliable
+                and complete monitoring of accounting records. I participated in
+                the development of <span className="actcolor">new features</span>.
+              </Text>
+            </Text>
+
+            <Flex flexDirection={"column"} mt={["2vh", "2vh", "3vh", "3vh"]}>
+              <Grid flexDirection={"column"} gap={5}>
+                <Flex
+                  alignItems="center"
+                  flexDirection={{
+                    base: "column",
+                    md: "column",
+                    lg: "row",
+                    xl: "row",
+                  }}
+                  textAlign="center"
+                  m={"auto"}
+                >
+                  <SimpleGrid
+                    templateColumns={{
+                      base: "repeat(4, 1fr)",
+                      md: "repeat(4, 1fr)",
+                      lg: "repeat(4, 1fr)",
+                      xl: "repeat(4, 1fr)",
+                    }}
+                    gap={10}
+                    ml={{ base: 0, md: 0, lg: "5vh", xl: "5vh" }}
+                    mt={{ base: "2vh", md: "2vh" }}
+                    color={"brand.text2"}
+                  >
+                    <Icon
+                      as={SiPhp}
+                      boxSize={{
+                        base: "9vw",
+                        md: "10vw",
+                        lg: "6vw",
+                        xl: "6vw",
+                      }}
+                      className="float3"
+                    />
+                    <Icon
+                      as={FaSymfony}
+                      boxSize={{
+                        base: "9vw",
+                        md: "10vw",
+                        lg: "6vw",
+                        xl: "6vw",
+                      }}
+                      className="float1"
+                    />
+
+                    <Icon
+                      as={SiJavascript}
+                      boxSize={{
+                        base: "9vw",
+                        md: "10vw",
+                        lg: "6vw",
+                        xl: "6vw",
+                      }}
+                      className="float2"
+                    />
+                    <Icon
+                      as={SiMysql}
+                      boxSize={{
+                        base: "8vw",
+                        md: "10vw",
+                        lg: "6vw",
+                        xl: "6vw",
+                      }}
+                      className="float5"
+                    />
+                  </SimpleGrid>
+                </Flex>
+              </Grid>
+            </Flex>
+          </Flex>
+          <Box m={["auto", "auto", "auto", "auto"]}>
+            <Image
+              src="/assets/images/actadat.png"
+              width={{ base: "50vw", md: "60vw", lg: "80vw", xl: "100vw" }}
+              height={"auto"}
+              alt="Me"
+              mt={["5vh", "5vh"]}
+            />
+          </Box>
+        </Flex>
+      </Flex>
+    </Stack>
   );
 }
 
