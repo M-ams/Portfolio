@@ -12,7 +12,7 @@ import {
 
 function Homepage() {
   return (
-    <Box className=" min-h-screen flex" bg={"brand.bg"}>
+    <Box className=" min-h-screen flex optima" bg={"brand.bg"}>
       <Navbar />
 
       <Stack 
