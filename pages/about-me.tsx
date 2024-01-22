@@ -45,7 +45,7 @@ function AboutMe() {
         className="cssanimation sequence fadeInBottom"
       >
         <Flex flexDirection={"column"}>
-          <Text
+          <Box
             fontSize={{ base: "17px", md: "23px", lg: "1.5vw", xl: "2.5vw" }}
             color={"brand.text1"}
             mt={["2vh", "2vh", "3vh", "3vh"]}
@@ -68,7 +68,7 @@ function AboutMe() {
               Here is some languages that I have discovered and have been able
               to practice
             </Text>
-          </Text>
+          </Box>
 
           <Flex flexDirection={"column"} mt={["2vh", "2vh", "3vh", "3vh"]}>
             <Grid flexDirection={"column"} gap={5}>
@@ -227,7 +227,7 @@ function AboutMe() {
         mb={["5vh", "5vh", "10vh", "10vh"]}
         className="cssanimation sequence fadeInBottom"
       >
-        <Text
+        <Box
           fontSize={{ base: "17px", md: "23px", lg: "1.5vw", xl: "2.5vw" }}
           textAlign={{ base: "center", md: "center", lg: "left", xl: "left" }}
           color={"brand.text1"}
@@ -237,11 +237,11 @@ function AboutMe() {
           className="cssanimation sequence fadeInBottom font-semibold"
         >
           <Flex flexDirection={"column"}>
-            <Text>Full Stack Developer At <Link
+            {/* <Text>Full Stack Developer At <a
               href={"https://www.uptodo.fr/"}
               target="_blank"
               className="text-white"
-            >Uptodo</Link></Text>
+            >Uptodo</a></Text> */}
 
             <Text>Sep 2022 - Nov 2023 </Text>
           </Flex>
@@ -259,7 +259,7 @@ function AboutMe() {
             skills, see how software development works with production etc ...
             and prepare myself for the professional world.
           </Text>
-        </Text>
+        </Box>
         <Box m={["auto", "auto", "auto", "auto"]}>
           <Image
             src="/assets/images/work.png"

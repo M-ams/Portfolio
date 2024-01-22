@@ -30,44 +30,26 @@ function Navbar() {
       >
         {/* Desktop */}
         <Flex align="center" justify="center" ml={"3vh"}>
-          <Avatar size={{base:"sm", md:"md", lg:"lg", xl:"xl"  }} src={"assets/images/avatar.png"} mr={2} />
-          <Text className="font-semibold" color={"brand.text2"}
+          <Avatar
+            size={{ base: "sm", md: "md", lg: "lg", xl: "xl" }}
+            src={"assets/images/avatar.png"}
+            mr={2}
+          />
+          <Text
+            className="font-semibold"
+            color={"brand.text2"}
             fontSize={{ base: "2vw", md: "2vw", lg: "1vw", xl: "2vw" }}
           >
             Mams
           </Text>
         </Flex>
-
-        {/* <Flex
-          display={["none", "none", "flex", "flex"]}
-          ml={"auto"}
-          mr={"3vh"}
-          align="center"
-          justify="center"
-          m={"auto"}
-        >
-          <Link href={"https://github.com/Mams-sy"} target="_blank"
-          >
-            <Icon as={FaGithub} w={10} h={10} />
-          </Link>
-          <Link
-            href={"https://www.linkedin.com/in/mamadou-sy/"}
-            target="_blank"
-          >
-            <Icon as={FaLinkedin} w={10} h={10} />
-          </Link>
-        </Flex>  */}
-        
-        <Flex display={["none", "none", "flex", "flex"]}
-          ml={"auto"}
-        >
+        <Flex display={["none", "none", "flex", "flex"]} ml={"auto"}>
           <Link href="/">
             <Button
               className="gg"
               bg="bg"
               _hover={{ bg: "brand.componentbghover" }}
               color="brand.text2"
-              as="a"
               my={5}
               w="100%"
               size={"lg"}
@@ -78,7 +60,6 @@ function Navbar() {
           <Link href="/about-me">
             <Button
               className="gg2"
-              as="a"
               bg="bg"
               _hover={{ bg: "brand.componentbghover" }}
               color="brand.text2"
@@ -93,7 +74,6 @@ function Navbar() {
           <Link href="/projects">
             <Button
               className="gg3"
-              as="a"
               bg="bg"
               _hover={{ bg: "brand.componentbghover" }}
               color="brand.text2"
@@ -108,7 +88,6 @@ function Navbar() {
           <Link href="/contact">
             <Button
               className="gg4"
-              as="a"
               bg="bg"
               _hover={{ bg: "brand.componentbghover" }}
               color="brand.text2"
@@ -159,13 +138,13 @@ function Navbar() {
             size="lg"
             icon={<CloseIcon />}
             onClick={() => changeDisplay("none")}
+            role="button"
           />
         </Flex>
 
         <Flex flexDir="column" align="center">
           <Link href="/" passHref>
             <Button
-              as="a"
               _hover={{ bg: "brand.componentbghover" }}
               bg="brand.componentbg"
               color={"brand.text2"}
@@ -179,7 +158,6 @@ function Navbar() {
 
           <Link href="/about-me" passHref>
             <Button
-              as="a"
               _hover={{ bg: "brand.componentbghover" }}
               bg="brand.componentbg"
               color={"brand.text2"}
@@ -193,7 +171,6 @@ function Navbar() {
 
           <Link href="/projects" passHref>
             <Button
-              as="a"
               _hover={{ bg: "brand.componentbghover" }}
               bg="brand.componentbg"
               color={"brand.text2"}
@@ -207,7 +184,6 @@ function Navbar() {
 
           <Link href="/contact" passHref>
             <Button
-              as="a"
               _hover={{ bg: "brand.componentbghover" }}
               bg="brand.componentbg"
               color={"brand.text2"}
