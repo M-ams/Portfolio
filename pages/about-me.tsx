@@ -237,11 +237,11 @@ function AboutMe() {
           className="cssanimation sequence fadeInBottom font-semibold"
         >
           <Flex flexDirection={"column"}>
-            {/* <Text>Full Stack Developer At <a
+            <Text>Full Stack Developer At <Link
               href={"https://www.uptodo.fr/"}
               target="_blank"
               className="text-white"
-            >Uptodo</a></Text> */}
+            >Uptodo</Link></Text>
 
             <Text>Sep 2022 - Nov 2023 </Text>
           </Flex>

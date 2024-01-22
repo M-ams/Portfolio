@@ -25,7 +25,7 @@ import Navbar from "../components/Navbar";
 
 function Projects() {
   return (
-    <Box className=" min-h-screen flex flex-col" bg={"brand.bg"}>
+    <Box className=" min-h-screen flex flex-col optima" bg={"brand.bg"}>
       <Navbar />
 
       <Heading

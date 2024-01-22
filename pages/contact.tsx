@@ -1,38 +1,111 @@
 import Link from "next/link";
 
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+import {
+  Box,
+  Container,
+  Flex,
+  Stack,
+  Text,
+  Grid,
+  Heading,
+  Icon,
+  SimpleGrid,
+  Image,
+  HStack,
+  Button,
+} from "@chakra-ui/react";
+import Navbar from "../components/Navbar";
+
 function Contact() {
   return (
-    <div className="bg-[#121111] min-h-screen flex flex-col">
-      <div className="flex flex-col xl:mt-[25vh] xl:ml-[17vw] lg:mt-[25vh] lg:ml-[17vw] 2xl:mt-[25vh] 2xl:ml-[17vw] optima xs:text-center sm:text-center md:text-center ">
-        <p className="text-[10vw] xs:text-6xl lg:text-6xl xs:mt-32 lg:mt-32 md:mt-32 text-white gg">Hello.</p>
-        <p className="text-[2vw] xs:text-[5vw] sm:text-[5vw] md:text-[5vw] text-white mt-10 font-thin gg2">
-          Interested in my profile ? Get in touch
-        </p>
-        <p className="text-[2vw] xs:text-[5vw] text-white mt-6 font-thin gg2">
-          Email:{" "}
-          <Link href="mailto:mamadou.sy143@gmail.com" className="underline">
-            {" "}
-            mamadou.sy143@gmail.com
+    <Flex className=" min-h-screen flex flex-col optima" bg={"brand.bg"}>
+      <Navbar />
+      <Flex
+        className="cssanimation sequence fadeInBottom"
+        flexDirection={"column"}
+        textAlign={"center"}
+        m={"auto"}
+      >
+        <Text
+          fontSize={{ base: "20px", md: "35px", lg: "5w", xl: "8vw" }}
+          color={"brand.text2"}
+          as={"b"}
+          mt={["10vh", "10vh", "15vh", "15vh"]}
+          className="cssanimation sequence fadeInBottom"
+          m={"auto"}
+        >
+          Hello.
+        </Text>
+        <Text
+          fontSize={{ base: "20px", md: "35px", lg: "2vw", xl: "3vw" }}
+          color={"brand.text2"}
+          as={"b"}
+          mt={"10vh"}
+          className="cssanimation sequence fadeInBottom"
+          textAlign={["center", "center", "left", "left"]}
+        >
+          Interested in working together? Get in touch!
+        </Text>
+
+        <Flex textAlign={"center"} m={"auto"}>
+          <Text
+            fontSize={{ base: "20px", md: "35px", lg: "2vw", xl: "3vw" }}
+            color={"brand.text2"}
+            as={"b"}
+            className="cssanimation sequence fadeInBottom"
+            textAlign={["center", "center", "left", "left"]}
+          >
+            Email me to:
+          </Text>
+
+          <Link href={"mailto:mamadou.sy143@gmail.com"} target="_blank">
+            <Text
+              fontSize={{ base: "20px", md: "35px", lg: "2vw", xl: "3vw" }}
+              color={"brand.text2"}
+              as={"b"}
+              mt={"10vh"}
+              className="cssanimation sequence fadeInBottom"
+              textDecoration={"underline"}
+            >
+              mamadou.sy143@gmail.com
+            </Text>
           </Link>
-        </p>
-        <p className="text-[2vw] xs:text-[5vw] text-white mt-6 font-thin gg3">
-          On the internet:{" "}
-          <Link href="https://www.linkedin.com/in/mamadou-sy/" className="underline">
-            {" "}
-            Linkedin
-          </Link> / 
-            <Link href="https://github.com/Mams-sy" className="underline">
-                {" "}
-                Github
-            </Link>
-        </p>
-      </div>
-      <div className="flex m-auto mt-[15vh] space-x-6 cssanimation sequence fadeInBottom ">
-        <Link href="/" className="btn btn--stripe btn--radius 2xl:text-[4vw]">
-          Home
-        </Link>
-      </div>
-    </div>
+        </Flex>
+
+        <Text
+          fontSize={{ base: "20px", md: "35px", lg: "2vw", xl: "3vw" }}
+          color={"brand.text2"}
+          as={"b"}
+          mt={"10vh"}
+          className="cssanimation sequence fadeInBottom"
+          textAlign={"center"}
+        >
+          Or find me on:
+        </Text>
+        <HStack className="cssanimation sequence fadeInBottom" m={"auto"}>
+          <Link href={"https://github.com/M-ams"} target="_blank">
+            <Button
+              bg="black"
+              color={"white"}
+              leftIcon={<FaGithub />}
+              _hover={{ bg: "brand.componentbghover" }}
+            >
+              Github
+            </Button>
+          </Link>
+          <Link
+            href={"https://www.linkedin.com/in/mamadou-sy/"}
+            target="_blank"
+          >
+            <Button colorScheme="linkedin" leftIcon={<FaLinkedin />}>
+              Linkedin
+            </Button>
+          </Link>
+        </HStack>
+      </Flex>
+    </Flex>
   );
 }
 
