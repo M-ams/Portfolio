@@ -28,7 +28,7 @@ function Navbar() {
         bg="rgba(17,17,17,0.1)"
         w={["100vw", "100vw", "100vw", "100vw"]}
         zIndex={1}
-        className="backdrop-filter backdrop-blur-lg"
+        className="backdrop-filter backdrop-blur-[8px]"
         
       >
         {/* Desktop */}
