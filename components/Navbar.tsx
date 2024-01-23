@@ -19,30 +19,18 @@ function Navbar() {
   const isDark = colorMode === "dark";
   const [display, changeDisplay] = useState("none");
   return (
-    <Flex>
+    <Flex
+    
+    >
       <Flex
         position="fixed"
         paddingRight={10}
         align="center"
-        bg="brand.componentbg"
+        bg="brand.bg"
         w={["100vw", "100vw", "100vw", "100vw"]}
         zIndex={1}
       >
         {/* Desktop */}
-        <Flex align="center" justify="center" ml={"3vh"}>
-          <Avatar
-            size={{ base: "sm", md: "md", lg: "lg", xl: "xl" }}
-            src={"assets/images/avatar.png"}
-            mr={2}
-          />
-          <Text
-            className="font-semibold"
-            color={"brand.text2"}
-            fontSize={{ base: "2vw", md: "2vw", lg: "1vw", xl: "2vw" }}
-          >
-            Mams
-          </Text>
-        </Flex>
         <Flex display={["none", "none", "flex", "flex"]} ml={"auto"}>
           <Link href="/">
             <Button
