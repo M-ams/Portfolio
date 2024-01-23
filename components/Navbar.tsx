@@ -20,27 +20,29 @@ function Navbar() {
   const [display, changeDisplay] = useState("none");
   return (
     <Flex
-    
     >
       <Flex
         position="fixed"
         paddingRight={10}
         align="center"
-        bg="brand.bg"
+        bg="rgba(17,17,17,0.1)"
         w={["100vw", "100vw", "100vw", "100vw"]}
         zIndex={1}
+        className="backdrop-filter backdrop-blur-lg"
+        
       >
         {/* Desktop */}
         <Flex display={["none", "none", "flex", "flex"]} ml={"auto"}>
           <Link href="/">
             <Button
-              className="gg"
               bg="bg"
               _hover={{ bg: "brand.componentbghover" }}
               color="brand.text2"
               my={5}
               w="100%"
               size={"lg"}
+              className="gg"
+              
             >
               Home
             </Button>
