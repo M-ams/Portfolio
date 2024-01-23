@@ -12,6 +12,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
+
 import Link from "next/link";
 
 function Navbar() {
@@ -26,9 +27,9 @@ function Navbar() {
         paddingRight={10}
         align="center"
         bg="rgba(17,17,17,0.1)"
+        className="backdrop-filter backdrop-blur-[8px]"
         w={["100vw", "100vw", "100vw", "100vw"]}
         zIndex={1}
-        className="backdrop-filter backdrop-blur-[8px]"
         
       >
         {/* Desktop */}
@@ -111,7 +112,8 @@ function Navbar() {
           ml={"auto"}
           aria-label="Open Menu"
           size="lg"
-          bg="brand.componentbg"
+          bg="rgba(17,17,17,0.1)"
+        className="backdrop-filter backdrop-blur-[8px]"
           color={"brand.text2"}
           _hover={{ bg: "brand.componentbghover" }}
           icon={<HamburgerIcon />}
