@@ -92,7 +92,7 @@ function Navbar() {
           <Link href="/assets/cv/cv.pdf" target="_blank">
             <Button
               className="gg4"
-              bg="brand.border"
+              bg="#045468"
               _hover={{ bg: "brand.border1" }}
               color="brand.text2"
               my={5}
