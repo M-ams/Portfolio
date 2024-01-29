@@ -89,7 +89,7 @@ function Projects() {
                 <span className="dark-purple">front-end</span> aspect.
               </Text>
               <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
-                The purpose of this project is to enable Discord servers to
+                The purpose of this project is to enable Discord servers to 
                 <span className="dark-purple">generate</span> their own{" "}
                 <span className="dark-purple">
                   personalized invitation links
