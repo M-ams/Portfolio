@@ -57,7 +57,7 @@ function Contact() {
             className="cssanimation sequence fadeInBottom"
             textAlign={["center", "center", "left", "left"]}
           >
-            Email me to:
+            Email me at:
           </Text>
 
           <Link href={"mailto:mamadou.sy143@gmail.com"} target="_blank">
