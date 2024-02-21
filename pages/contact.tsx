@@ -18,7 +18,13 @@ import {
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 
+import { useLanguage } from '../LanguageContext';
+
+
 function Contact() {
+
+  const { currentLanguage, changeLanguage } = useLanguage();
+
   return (
     <Flex className=" min-h-screen flex flex-col optima" bg={"brand.bg"}>
       <Navbar />
@@ -36,7 +42,8 @@ function Contact() {
           className="cssanimation sequence fadeInBottom"
           m={"auto"}
         >
-          Hello.
+         {currentLanguage === 'fr' ? 'Salut.' : 'Hello.'}
+          
         </Text>
         <Text
           fontSize={{ base: "20px", md: "35px", lg: "2vw", xl: "3vw" }}
@@ -46,7 +53,8 @@ function Contact() {
           className="cssanimation sequence fadeInBottom"
           textAlign={["center", "center", "left", "left"]}
         >
-          Interested in working together? Get in touch!
+         {currentLanguage === 'fr' ? 'Intéressé pour travailler ensemble ? Contactez-moi !' : 'Interested in working together? Get in touch!'}
+
         </Text>
 
         <Flex textAlign={"center"} m={"auto"}>
@@ -57,7 +65,8 @@ function Contact() {
             className="cssanimation sequence fadeInBottom"
             textAlign={["center", "center", "left", "left"]}
           >
-            Email me at:
+         {currentLanguage === 'fr' ? 'Envoyez un mail à:' : 'Email me at:'}
+          
           </Text>
 
           <Link href={"mailto:mamadou.sy143@gmail.com"} target="_blank">
@@ -82,7 +91,9 @@ function Contact() {
           className="cssanimation sequence fadeInBottom"
           textAlign={"center"}
         >
-          Or find me on:
+         {currentLanguage === 'fr' ? 'Ou trouvez moi sur:' : 'Or find me on:'}
+
+          
         </Text>
         <HStack className="cssanimation sequence fadeInBottom" m={"auto"}>
           <Link href={"https://github.com/M-ams"} target="_blank">

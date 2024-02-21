@@ -16,7 +16,13 @@ import {
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 
+import { useLanguage } from "../LanguageContext";
+
 function AboutMe() {
+  const { currentLanguage, translations } = useLanguage();
+  const { aboutme1, aboutme2, aboutme3 } = translations[currentLanguage];
+  const { uptodo1, uptodo2, uptodo3 } = translations[currentLanguage];
+
   return (
     <Stack className=" min-h-screen flex flex-col optima" bg={"brand.bg"}>
       <Navbar />
@@ -29,7 +35,7 @@ function AboutMe() {
         mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
         className="cssanimation sequence fadeInBottom"
       >
-        What about me ?
+        {currentLanguage === "fr" ? "À propos de moi ?" : "What about me ?"}
       </Heading>
       <Flex
         flexDirection={{
@@ -43,6 +49,8 @@ function AboutMe() {
         ml={{ base: 0, md: 0, lg: "10vh", xl: "10vh" }}
         mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
         className="cssanimation sequence fadeInBottom"
+        w={"90vw"}
+
       >
         <Flex flexDirection={"column"}>
           <Box
@@ -53,21 +61,15 @@ function AboutMe() {
             mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
             className="cssanimation sequence fadeInBottom font-semibold"
           >
-            <Text>
-              Since childhood I have always had an attraction towards computers.
-              After some adventures, back in 2021 where I found myself doing a
-              web development school for a period of 2 years.
-            </Text>
-            <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
-              During which I was able to discover the world of work in this
-              field. My main goal these days is to improve my web skills by
-              integrating a company with a passionate team that will make me a
-              better developer.
-            </Text>
-            <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
-              Here is some languages that I have discovered and have been able
-              to practice
-            </Text>
+            <Text dangerouslySetInnerHTML={{ __html: aboutme1 }}></Text>
+            <Text
+              mt={["2vh", "2vh", "3vh", "3vh"]}
+              dangerouslySetInnerHTML={{ __html: aboutme2 }}
+            ></Text>
+            <Text
+              mt={["2vh", "2vh", "3vh", "3vh"]}
+              dangerouslySetInnerHTML={{ __html: aboutme3 }}
+            ></Text>
           </Box>
 
           <Flex flexDirection={"column"} mt={["2vh", "2vh", "3vh", "3vh"]}>
@@ -120,7 +122,7 @@ function AboutMe() {
                     boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
                     className="float1"
                   />
-                  
+
                   <Icon
                     as={SiTypescript}
                     boxSize={{ base: "15vw", md: "10vw", lg: "6vw", xl: "6vw" }}
@@ -210,7 +212,9 @@ function AboutMe() {
         mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
         className="cssanimation sequence fadeInBottom"
       >
-        Where I&apos;ve worked?
+        {currentLanguage === "fr"
+          ? "Où ai-je travaillé ?"
+          : "Where I have worked ?"}
       </Heading>
 
       <Flex
@@ -226,6 +230,8 @@ function AboutMe() {
         mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
         mb={["5vh", "5vh", "10vh", "10vh"]}
         className="cssanimation sequence fadeInBottom"
+        w={"90vw"}
+
       >
         <Box
           fontSize={{ base: "17px", md: "23px", lg: "1.5vw", xl: "2.5vw" }}
@@ -237,28 +243,34 @@ function AboutMe() {
           className="cssanimation sequence fadeInBottom font-semibold"
         >
           <Flex flexDirection={"column"}>
-            <Text>Full Stack Developer At <Link
-              href={"https://www.uptodo.fr/"}
-              target="_blank"
-              className="text-white"
-            >Uptodo</Link></Text>
+            <Text>
+              {currentLanguage === "fr"
+                ? "Développeur Full-Stack chez "
+                : "Full-Stack Develepor At "}
+
+              <Link
+                href={"https://www.uptodo.fr/"}
+                target="_blank"
+                className="text-white"
+              >
+                Uptodo
+              </Link>
+            </Text>
 
             <Text>Sep 2022 - Nov 2023 </Text>
           </Flex>
-          <Text mt={["3vh", "3vh", "4vh", "4vh"]}>
-            At uptodo I participated in the development of the Actadat software.
-            The languages were Symfony and Javascript
-          </Text>
-          <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
-            My missions were to develop new features based on customer feedback
-            and update them. I also participated in the meetings to reflect on
-            the application evolution perspectives.
-          </Text>
-          <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
-            This very enriching first experience allowed me to develop my
-            skills, see how software development works with production etc ...
-            and prepare myself for the professional world.
-          </Text>
+          <Text
+            mt={["3vh", "3vh", "4vh", "4vh"]}
+            dangerouslySetInnerHTML={{ __html: uptodo1 }}
+          ></Text>
+          <Text
+            mt={["2vh", "2vh", "3vh", "3vh"]}
+            dangerouslySetInnerHTML={{ __html: uptodo2 }}
+          ></Text>
+          <Text
+            mt={["2vh", "2vh", "3vh", "3vh"]}
+            dangerouslySetInnerHTML={{ __html: uptodo3 }}
+          ></Text>
         </Box>
         <Box m={["auto", "auto", "auto", "auto"]}>
           <Image

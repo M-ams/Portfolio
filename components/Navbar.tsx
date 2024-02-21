@@ -8,10 +8,12 @@ import {
   Avatar,
   Text,
   Icon,
+  Box,
+  Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-
+import { useLanguage } from "../LanguageContext";
 
 import Link from "next/link";
 
@@ -19,9 +21,16 @@ function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
   const [display, changeDisplay] = useState("none");
+  const { currentLanguage, changeLanguage } = useLanguage();
+
+  const flagImages: Record<string, string> = {
+    fr: "/assets/images/flagfr.png",
+    en: "/assets/images/flagen.png",
+    // Ajoutez d'autres langues au besoin
+  };
+
   return (
-    <Flex
-    >
+    <Flex>
       <Flex
         position="fixed"
         paddingRight={10}
@@ -30,8 +39,29 @@ function Navbar() {
         className="backdrop-filter backdrop-blur-[8px]"
         w={["100vw", "100vw", "100vw", "100vw"]}
         zIndex={1}
-        
       >
+        <Box display="flex" alignItems="center" ml={10}>
+          <Image
+            src="/assets/images/flagfr.png"
+            alt={currentLanguage}
+            boxSize="20px"
+            mr={2}
+            borderRadius="full"
+          />
+          <Switch
+            colorScheme="red"
+            onChange={changeLanguage}
+            isChecked={currentLanguage === "en"}
+            
+          />
+          <Image
+            src="/assets/images/flagen.png"
+            alt={currentLanguage}
+            boxSize="20px"
+            ml={2}
+            borderRadius="full"
+          />
+        </Box>
         {/* Desktop */}
         <Flex display={["none", "none", "flex", "flex"]} ml={"auto"}>
           <Link href="/">
@@ -43,9 +73,8 @@ function Navbar() {
               w="100%"
               size={"lg"}
               className="gg"
-              
             >
-              Home
+              {currentLanguage === "fr" ? "Acceuil" : "Home"}
             </Button>
           </Link>
           <Link href="/about-me">
@@ -58,7 +87,7 @@ function Navbar() {
               w="100%"
               size={"lg"}
             >
-              About me
+              {currentLanguage === "fr" ? "À propos" : "About Me"}
             </Button>
           </Link>
 
@@ -72,7 +101,7 @@ function Navbar() {
               w="100%"
               size={"lg"}
             >
-              Projects
+              {currentLanguage === "fr" ? "Projets" : "Works"}
             </Button>
           </Link>
 
@@ -113,7 +142,7 @@ function Navbar() {
           aria-label="Open Menu"
           size="lg"
           bg="rgba(17,17,17,0.1)"
-        className="backdrop-filter backdrop-blur-[8px]"
+          className="backdrop-filter backdrop-blur-[8px]"
           color={"brand.text2"}
           _hover={{ bg: "brand.componentbghover" }}
           icon={<HamburgerIcon />}
@@ -159,7 +188,7 @@ function Navbar() {
               my={5}
               w="100%"
             >
-              Home
+              {currentLanguage === "fr" ? "Acceuil" : "Home"}
             </Button>
           </Link>
 
@@ -172,7 +201,7 @@ function Navbar() {
               my={5}
               w="100%"
             >
-              About Me
+              {currentLanguage === "fr" ? "À propos" : "About Me"}
             </Button>
           </Link>
 
@@ -185,7 +214,7 @@ function Navbar() {
               my={5}
               w="100%"
             >
-              Projects
+              {currentLanguage === "fr" ? "Projets" : "Works"}
             </Button>
           </Link>
 
@@ -204,13 +233,14 @@ function Navbar() {
           <Link href="/assets/cv/cv.pdf" target="_blank" passHref>
             <Button
               _hover={{ bg: "brand.componentbghover" }}
-              bg="brand.border"
+              bg="#045468"
               color={"brand.text2"}
               aria-label="Contact"
               my={5}
               w="100%"
               border={"2px solid"}
               borderColor={"brand.border3"}
+              
             >
               CV
             </Button>

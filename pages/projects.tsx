@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import {
   SiTypescript,
@@ -12,18 +11,25 @@ import { FaSymfony } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 
 import {
-  Box, Flex,
+  Box,
+  Flex,
   Stack,
   Text,
   Grid,
   Heading,
   Icon,
   SimpleGrid,
-  Image
+  Image,
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 
+import { useLanguage } from "../LanguageContext";
+
 function Projects() {
+  const { currentLanguage, translations } = useLanguage();
+  const { projectDescription1, projectPurpose1 } = translations[currentLanguage];
+  const { actadatDescription, internshipDescription } = translations[currentLanguage];
+
   return (
     <Box className=" min-h-screen flex flex-col optima" bg={"brand.bg"}>
       <Navbar />
@@ -37,12 +43,11 @@ function Projects() {
         mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
         className="cssanimation sequence fadeInBottom"
       >
-        Some of my Works{" "}
+         {currentLanguage === 'fr' ? 'Mes projets' : 'Some of my Works'}
+        
       </Heading>
 
-      
-       <Flex flexDirection={"column"} textAlign={"center"} mt={"10vh"}>
-
+      <Flex flexDirection={"column"} textAlign={"center"} mt={"10vh"}>
         <Link href={"https://dc.gg"} target="_blank">
           <Text
             color={"brand.text2"}
@@ -57,8 +62,7 @@ function Projects() {
             DC.GG
           </Text>
         </Link>
-       
-        
+
         <Flex
           flexDirection={{
             base: "column",
@@ -81,21 +85,14 @@ function Projects() {
               mx={{ base: "auto", md: "auto", lg: "", xl: "" }}
               className="cssanimation sequence fadeInBottom font-semibold"
             >
-              <Text>
-                <span className="dark-purple">DC.GG</span> is a group
-                end-of-studies project. During this project, I had the
-                opportunity to collaborate with a team of 4 individuals,
-                focusing mainly on the{" "}
-                <span className="dark-purple">front-end</span> aspect.
-              </Text>
-              <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
-                The purpose of this project is to enable Discord servers to 
-                <span className="dark-purple">generate</span> their own{" "}
-                <span className="dark-purple">
-                  personalized invitation links
-                </span>{" "}
-                with a functionnality of real-time tracking.
-              </Text>
+              <Text
+                dangerouslySetInnerHTML={{ __html: projectDescription1 }}
+                mt={["2vh", "2vh", "3vh", "3vh"]}
+              />
+              <Text
+                dangerouslySetInnerHTML={{ __html: projectPurpose1 }}
+                mt={["2vh", "2vh", "3vh", "3vh"]}
+              />
             </Box>
 
             <Flex flexDirection={"column"} mt={["2vh", "2vh", "3vh", "3vh"]}>
@@ -223,18 +220,9 @@ function Projects() {
               mt={["2vh", "2vh", "3vh", "3vh"]}
               className="cssanimation sequence fadeInBottom font-semibold"
             >
-              <Text>
-                <span className="actcolor">Actadat</span> was the software I was
-                working on during my{" "}
-                <span className="actcolor">internship</span>. This software is
-                for accounting firms.
-              </Text>
-              <Text mt={["2vh", "2vh", "3vh", "3vh"]}>
-                It allows you to manage your accounting firm and have a reliable
-                and complete monitoring of accounting records. I participated in
-                the development of{" "}
-                <span className="actcolor">new features</span>.
-              </Text>
+              <Text dangerouslySetInnerHTML={{ __html: actadatDescription }} />
+      <Text mt={["2vh", "2vh", "3vh", "3vh"]} dangerouslySetInnerHTML={{ __html: internshipDescription }} />
+    
             </Box>
 
             <Flex flexDirection={"column"} mt={["2vh", "2vh", "3vh", "3vh"]}>
@@ -318,7 +306,7 @@ function Projects() {
             />
           </Box>
         </Flex>
-      </Flex> 
+      </Flex>
     </Box>
   );
 }
