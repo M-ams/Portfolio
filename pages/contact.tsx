@@ -51,24 +51,28 @@ function Contact() {
           as={"b"}
           mt={"10vh"}
           className="cssanimation sequence fadeInBottom"
-          textAlign={["center", "center", "left", "left"]}
+          textAlign={"center"}
+          
         >
          {currentLanguage === 'fr' ? 'Intéressé pour travailler ensemble ? Contactez-moi !' : 'Interested in working together? Get in touch!'}
 
         </Text>
 
-        <Flex textAlign={"center"} m={"auto"}>
+        <Flex textAlign={"center"} m={"auto"}
+        flexDirection={["column", "column", "row", "row"]}
+        
+
+        >
           <Text
             fontSize={{ base: "20px", md: "35px", lg: "2vw", xl: "3vw" }}
             color={"brand.text2"}
             as={"b"}
             className="cssanimation sequence fadeInBottom"
-            textAlign={["center", "center", "left", "left"]}
+            textAlign={"center"}
           >
          {currentLanguage === 'fr' ? 'Envoyez un mail à:' : 'Email me at:'}
           
           </Text>
-
           <Link href={"mailto:mamadou.sy143@gmail.com"} target="_blank">
             <Text
               fontSize={{ base: "20px", md: "35px", lg: "2vw", xl: "3vw" }}
@@ -77,6 +81,7 @@ function Contact() {
               mt={"10vh"}
               className="cssanimation sequence fadeInBottom"
               textDecoration={"underline"}
+              
             >
               mamadou.sy143@gmail.com
             </Text>

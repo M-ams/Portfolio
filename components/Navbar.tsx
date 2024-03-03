@@ -1,4 +1,6 @@
-import { useState } from "react";
+"use client";
+
+import { useState, useEffect } from "react";
 import {
   useColorMode,
   Switch,
@@ -10,24 +12,53 @@ import {
   Icon,
   Box,
   Image,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuDivider,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useLanguage } from "../LanguageContext";
+import { useRouter } from "next/router";
 
 import Link from "next/link";
+import React from "react";
+import { redirect } from "next/dist/server/api-utils";
 
 function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
   const [display, changeDisplay] = useState("none");
   const { currentLanguage, changeLanguage } = useLanguage();
+  const [token, setToken] = useState("");
+  const [redirect, setRedirect] = useState(false);
 
   const flagImages: Record<string, string> = {
     fr: "/assets/images/flagfr.png",
     en: "/assets/images/flagen.png",
     // Ajoutez d'autres langues au besoin
   };
+
+  useEffect(() => {
+    // Check if window is defined to ensure it's running on the client side
+    if (typeof window !== "undefined") {
+      const storedToken = localStorage.getItem("token");
+      setToken(storedToken || "");
+    }
+  }, []);
+
+  const removeToken = () => {
+    setToken("");
+    localStorage.removeItem("token");
+    setRedirect(true);
+  };
+  const router = useRouter();
+
+  if (redirect) {
+    router.push("/login");
+  }
 
   return (
     <Flex>
@@ -40,7 +71,62 @@ function Navbar() {
         w={["100vw", "100vw", "100vw", "100vw"]}
         zIndex={1}
       >
-        <Box display="flex" alignItems="center" ml={10}>
+        <Flex alignItems={"center"}>
+          <Menu
+          >
+            <MenuButton
+              as={Button}
+              rounded={"full"}
+              variant={"link"}
+              cursor={"pointer"}
+              minW={0}
+            >
+              <Avatar
+                marginLeft="2vw"
+                size={"md"}
+                src="/assets/images/avatar.png"
+                className="gg"
+              />
+            </MenuButton>
+            {token ? (
+              <MenuList
+                bg="brand.componentbg"
+                color="brand.text2"
+                border="2px solid"
+                borderColor="brand.border3"
+              >
+                <MenuItem
+                  bg="brand.componentbg"
+                  _hover={{ bg: "brand.componentbghover" }}
+                >
+                  <Link href="/admin/dashboard">Dashboard</Link>
+                </MenuItem>
+                <MenuItem
+                  bg="brand.componentbg"
+                  _hover={{ bg: "brand.componentbghover" }}
+                >
+                  <Link href="/admin/create">Create a new project</Link>
+                </MenuItem>
+                <MenuItem
+                  bg="brand.componentbg"
+                  _hover={{ bg: "brand.componentbghover" }}
+                  onClick={removeToken}
+                >
+                  Logout
+                </MenuItem>
+              </MenuList>
+            ) : (
+              <MenuList>
+                <Link href="/login">
+                  <MenuItem>Login</MenuItem>
+                </Link>
+              </MenuList>
+            )}
+          </Menu>
+        </Flex>
+        <Box display="flex" alignItems="center" ml={10} 
+        className="gg2"
+        >
           <Image
             src="/assets/images/flagfr.png"
             alt={currentLanguage}
@@ -52,7 +138,6 @@ function Navbar() {
             colorScheme="red"
             onChange={changeLanguage}
             isChecked={currentLanguage === "en"}
-            
           />
           <Image
             src="/assets/images/flagen.png"
@@ -240,7 +325,6 @@ function Navbar() {
               w="100%"
               border={"2px solid"}
               borderColor={"brand.border3"}
-              
             >
               CV
             </Button>

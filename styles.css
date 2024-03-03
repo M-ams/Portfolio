@@ -347,4 +347,12 @@ opacity: 1;
   border-radius: 36px;
 }
 
+.linkContainer .arrow {
+  opacity: 0; /* Définir l'opacité à 0 par défaut */
+  transition: opacity 0.3s ease; /* Ajouter une transition pour adoucir le changement d'opacité */
+}
+
+.linkContainer:hover .arrow {
+  opacity: 1; /* Rendre la flèche visible au survol en modifiant l'opacité */
+}
 
