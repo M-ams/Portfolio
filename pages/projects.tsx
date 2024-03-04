@@ -36,7 +36,7 @@ function Projects() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://localhost:8000/api/works");
+        const response = await axios.get("https://mams-sy.000webhostapp.com/api/works");
         setProjects(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
